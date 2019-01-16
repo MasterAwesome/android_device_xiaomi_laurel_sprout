@@ -38,6 +38,9 @@ TARGET_2ND_CPU_VARIANT := cortex-a73
 
 TARGET_USES_64_BIT_BINDER := true
 
+# Flag for kernel headers generator
+BOARD_USES_QCOM_HARDWARE := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := trinket
 TARGET_NO_BOOTLOADER := true
