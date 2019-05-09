@@ -130,6 +130,11 @@
          -->
     <string name="config_mainBuiltInDisplayCutout">M-89.6,0 C-65.1346648,0 -51.1690203,0.18 -36.9506892,31.2970381 C-29.2758076,44.1422902 -15.4572493,53 0.0018857203,53 C15.4610208,53 29.2758076,44.1422902 36.9544607,31.2970381 C51.1690203,0.18 65.1384363,0 89.6,0 L-89.6,0 Z</string>
 
+     <!-- Whether the display cutout region of the main built-in display should be forced to
+         black in software (to avoid aliasing or emulate a cutout that is not physically existent).
+     -->
+    <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
+
     <!-- Height of the status bar in portrait -->
     <dimen name="status_bar_height_portrait">35dip</dimen>
 
