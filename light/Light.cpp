@@ -28,8 +28,8 @@
 #define BREATH          "breath"
 #define BRIGHTNESS      "brightness"
 #define MAX_BRIGHTNESS  "max_brightness"
-#define DELAY_OFF	    "delay_off"
-#define DELAY_ON 	    "delay_on"
+#define DELAY_OFF       "delay_off"
+#define DELAY_ON        "delay_on"
 
 namespace {
 /*
@@ -112,18 +112,24 @@ static void handleBacklight(const LightState& state) {
 static void handleNotification(const LightState& state) {
     uint32_t whiteBrightness = getScaledBrightness(state, getMaxBrightness(WHITE_LED MAX_BRIGHTNESS));
 
-    /* Disable breathing */
+    /* Disable breathing or blinking */
     set(WHITE_LED BREATH, 0);
+    set(WHITE_LED DELAY_OFF, 0);
+    set(WHITE_LED DELAY_ON, 0);
 
-    if (state.flashMode == Flash::TIMED) {
-        /* White */
-        set(WHITE_LED DELAY_OFF, state.flashOnMs);
-        set(WHITE_LED DELAY_ON, state.flashOffMs);
-
-        /* Enable Breathing */
-        set(WHITE_LED BREATH, 1);
-    } else {
-        set(WHITE_LED BRIGHTNESS, whiteBrightness);
+    switch (state.flashMode) {
+        case Flash::HARDWARE:
+            /* Breathing */  
+            set(WHITE_LED BREATH, 1);
+            break;
+        case Flash::TIMED:
+            /* Blinking */
+            set(WHITE_LED DELAY_OFF, state.flashOnMs);
+            set(WHITE_LED DELAY_ON, state.flashOffMs);
+            break;
+        case Flash::NONE:
+        default:
+            set(WHITE_LED BRIGHTNESS, whiteBrightness);
     }
 }
 
