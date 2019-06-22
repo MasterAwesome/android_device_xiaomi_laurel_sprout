@@ -118,6 +118,10 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     com.android.nfc_extras
+	
+# OTA
+PRODUCT_PACKAGES += \
+    Updates
 
 # Power
 PRODUCT_PACKAGES += \
