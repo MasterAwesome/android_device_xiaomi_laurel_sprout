@@ -1,7 +1,11 @@
 # Audio
+/system/etc/audio_effects.xml    u:object_r:vendor_configs_file:s0
 /system/etc/audio_policy_configuration.xml    u:object_r:vendor_configs_file:s0
 /system/lib64/soundfx/libvolumelistener\.so   u:object_r:vendor_file:s0
 /system/lib/soundfx/libvolumelistener\.so     u:object_r:vendor_file:s0
+
+# Custom Equilizer (JamesDSP)
+/system/lib/soundfx/libjamesdsp\.so    u:object_r:vendor_file:s0
 
 # Custom HALs
 /system/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_msmnile    u:object_r:hal_light_msmnile_exec:s0
