@@ -1,4 +1,3 @@
-//
 // Copyright (C) 2018 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,16 +15,17 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.xiaomi_cepheus",
-    init_rc: ["android.hardware.light@2.0-service.xiaomi_cepheus.rc"],
+    name: "android.hardware.light@2.0-service.xiaomi_msmnile",
+    init_rc: ["android.hardware.light@2.0-service.xiaomi_msmnile.rc"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
+        "android.hardware.light@2.0",
+        "libbase",
         "libhardware",
         "libhidlbase",
         "libhidltransport",
-        "liblog",
         "libhwbinder",
+        "liblog",
         "libutils",
-        "android.hardware.light@2.0",
     ],
 }
