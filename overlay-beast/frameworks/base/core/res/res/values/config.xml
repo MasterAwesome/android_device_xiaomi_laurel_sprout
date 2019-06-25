@@ -51,5 +51,8 @@
     <!-- Control whether the always on display mode is enabled by default. This value will be used
          during initialization when the setting is still null. -->
     <bool name="config_dozeAlwaysOnEnabled">true</bool>
+	
+    <!-- Show a custom view for Facola -->
+    <bool name="config_needCustomFacolaView">true</bool>
 
 </resources>
