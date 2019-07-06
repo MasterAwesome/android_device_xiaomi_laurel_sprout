@@ -645,6 +645,32 @@
 
     <!-- Whether camera shutter sound is forced or not  (country specific). -->
      <bool name="config_camera_sound_forced">true</bool>
+	 
+    <!-- The bounding path of the cutout region of the main built-in display.
+         Must either be empty if there is no cutout region, or a string that is parsable by
+         {@link android.util.PathParser}.
+         The path is assumed to be specified in display coordinates with pixel units and in
+         the display's native orientation, with the origin of the coordinate system at the
+         center top of the display.
+         To facilitate writing device-independent emulation overlays, the marker `@dp` can be
+         appended after the path string to interpret coordinates in dp instead of px units.
+         Note that a physical cutout should be configured in pixels for the best results.
+         -->
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M -58,0 L -58,74 L 58,74 L 58,0 Z</string>
+
+    <!-- Height of the status bar in portrait -->
+    <dimen name="status_bar_height_portrait">74px</dimen>
+
+    <!-- Height of the status bar in landscape -->
+    <dimen name="status_bar_height_landscape">24dp</dimen>
+
+    <!-- Radius of the software rounded corners at the top of the display in its natural
+        orientation. If zero, the value of rounded_corner_radius is used. -->
+    <dimen name="rounded_corner_radius_top">100px</dimen>
+
+    <!-- Radius of the software rounded corners at the bottom of the display in its natural
+        orientation. If zero, the value of rounded_corner_radius is used. -->
+    <dimen name="rounded_corner_radius_bottom">110px</dimen>
 
     <!-- Flag specifying whether VoLTE should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
@@ -696,11 +722,6 @@
     -->
      <bool name="config_enableWifiDisplay">false</bool>
 
-    <!-- Whether the display cutout region of the main built-in display should be forced to
-         black in software (to avoid aliasing or emulate a cutout that is not physically existent).
-    -->
-     <bool name="config_fillMainBuiltInDisplayCutout">false</bool>
-
     <!-- Is the device capable of hot swapping an ICC Card -->
      <bool name="config_hotswapCapable">true</bool>
 
@@ -709,22 +730,12 @@
          The default is false. -->
      <bool name="config_lidControlsSleep">true</bool>
 
-    <!-- Indicate whether to allow the device to suspend when the screen is off
-         due to the proximity sensor.  This resource should only be set to true
-         if the sensor HAL correctly handles the proximity sensor as a wake-up source.
-         Otherwise, the device may fail to wake out of suspend reliably.
-         The default is false. -->
-    <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
-
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently in hardware. -->
      <bool name="config_setColorTransformAccelerated">true</bool>
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
      <bool name="config_showNavigationBar">true</bool>
-
-     <!-- Enable system navigation keys. -->
-    <bool name="config_supportSystemNavigationKeys">false</bool>
 
     <!-- Burn in protection -->
     <bool name="config_statusBarBurnInProtection">true</bool>
@@ -788,19 +799,6 @@
     <!-- The restoring is handled by modem if it is true-->
      <bool name="skip_restoring_network_selection">true</bool>
 
-    <!-- Height of the status bar -->
-     <dimen name="status_bar_height_portrait">74px</dimen>
-
-    <!-- Height of the status bar in landscape -->
-     <dimen name="status_bar_height_landscape">24dp</dimen>
-
-     <!-- Radius of the software rounded corners at the top of the display in its natural
-        orientation. If zero, the value of rounded_corner_radius is used. -->
-     <dimen name="rounded_corner_radius_top">100px</dimen>
-    <!-- Radius of the software rounded corners at the bottom of the display in its natural
-        orientation. If zero, the value of rounded_corner_radius is used. -->
-     <dimen name="rounded_corner_radius_bottom">110px</dimen>
-
     <!-- Operating volatage for bluetooth controller. 0 by default-->
      <integer name="config_bluetooth_operating_voltage_mv">3300</integer>
 
@@ -820,20 +818,6 @@
      <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-82</integer>
      <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_24GHz">-73</integer>
      <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_5GHz">-70</integer>
-
-    <!-- The bounding path of the cutout region of the main built-in display.
-         Must either be empty if there is no cutout region, or a string that is parsable by
-         {@link android.util.PathParser}.
-    
-         The path is assumed to be specified in display coordinates with pixel units and in
-         the display's native orientation, with the origin of the coordinate system at the
-         center top of the display.
-    
-         To facilitate writing device-independent emulation overlays, the marker `@dp` can be
-         appended after the path string to interpret coordinates in dp instead of px units.
-         Note that a physical cutout should be configured in pixels for the best results.
-    -->
-     <string name="config_mainBuiltInDisplayCutout">M-76.9985203,12.6526029 C-66.7142769,24.2251334 -58.6436698,34.9109506 -52.7866989,44.7100544 C-41.8225823,63.0604145 -22.0817847,75 0.00269388614,75 C22.0871725,75 41.8225823,63.0604145 52.7920867,44.7100544 C58.6467515,34.9122099 66.7153603,24.2272938 76.9979132,12.6553061 L77,0 L-76.9991414,0 L-76.9985203,12.6526029 Z</string>
 
     <!--  Define Google play service package for FRP-->
      <string name="config_persistentDataPackageName">com.google.android.gms</string>
@@ -996,8 +980,4 @@
     <!-- Control whether the always on display mode is enabled by default. This value will be used
          during initialization when the setting is still null. -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
-
-    <!-- Show a custom view for FOD -->
-    <bool name="config_needCustomFODView">true</bool>
-
 </resources>

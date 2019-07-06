@@ -84,5 +84,4 @@
 	
     <!-- Show a custom view for Facola -->
     <bool name="config_needCustomFacolaView">true</bool>
-
 </resources>
