@@ -82,6 +82,6 @@
     <!-- Whether the device has outdated qti-telephony-common.jar -->
     <bool name="config_oldQtiTelephony">false</bool>
 	
-    <!-- Show a custom view for Facola -->
-    <bool name="config_needCustomFacolaView">true</bool>
+    <!-- Show a custom view for FOD -->
+    <bool name="config_needCustomFODView">true</bool>
 </resources>
