@@ -30,7 +30,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-beast
 
 # Properties
--include $(LOCAL_PATH)/system_prop.mk
+-include $(LOCAL_PATH)/system-props.mk
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
@@ -163,3 +163,6 @@ PRODUCT_BOOT_JARS += \
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
+	
+PRODUCT_PACKAGES += \
+    vndk_package
