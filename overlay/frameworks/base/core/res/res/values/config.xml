@@ -1043,5 +1043,9 @@
          "oldname:newname", one per entry. -->
     <string-array name="config_displayModeMappings" translatable="false">
         <item>none:standard</item>
+        <item>smart_eyedefault:reading</item>
+        <item>GM_1:saturated</item>
+        <item>hal_srgb:srgb</item>
+        <item>smart_MC:dci_p3</item>
     </string-array>
 </resources>
