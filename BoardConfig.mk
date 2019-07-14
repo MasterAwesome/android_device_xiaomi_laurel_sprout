@@ -85,6 +85,9 @@ endif
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+
 # Graphics
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
 TARGET_USES_HWC2 := true

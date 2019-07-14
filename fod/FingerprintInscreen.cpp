@@ -20,14 +20,15 @@
 
 #include <android-base/logging.h>
 #include <fstream>
+#include <cmath>
 
 #define COMMAND_NIT 10
 #define PARAM_NIT_FOD 3
 #define PARAM_NIT_NONE 0
 
-#define DISPPARAM_PATH "/sys/class/drm/card0-DSI-1/disp_param"
-#define DISPPARAM_FOD_BACKLIGHT_HBM "0xD007FF"
-#define DISPPARAM_FOD_BACKLIGHT_RESET "0xD01000"
+#define FOD_HBM_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm"
+#define FOD_HBM_ON 1
+#define FOD_HBM_OFF 0
 
 #define FOD_STATUS_PATH "/sys/devices/virtual/touch/tp_dev/fod_status"
 #define FOD_STATUS_ON 1
@@ -80,13 +81,13 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 }
 
 Return<void> FingerprintInscreen::onPress() {
-    set(DISPPARAM_PATH, DISPPARAM_FOD_BACKLIGHT_HBM);
+    set(FOD_HBM_PATH, FOD_HBM_ON);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_FOD);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
-    set(DISPPARAM_PATH, DISPPARAM_FOD_BACKLIGHT_RESET);
+    set(FOD_HBM_PATH, FOD_HBM_OFF);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
     return Void();
 }
@@ -98,7 +99,7 @@ Return<void> FingerprintInscreen::onShowFODView() {
 
 Return<void> FingerprintInscreen::onHideFODView() {
     set(FOD_STATUS_PATH, FOD_STATUS_OFF);
-    set(DISPPARAM_PATH, DISPPARAM_FOD_BACKLIGHT_RESET);
+    set(FOD_HBM_PATH, FOD_HBM_OFF);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
     return Void();
 }
@@ -118,7 +119,15 @@ Return<void> FingerprintInscreen::setLongPressEnabled(bool) {
 }
 
 Return<int32_t> FingerprintInscreen::getDimAmount(int32_t brightness) {
-    return 255 - brightness;
+    float alpha;
+
+    if (brightness > 62) {
+        alpha = 1.0 - pow(brightness / 255.0 * 430.0 / 600.0, 0.45);
+    } else {
+        alpha = 1.0 - pow(brightness / 200.0, 0.45);
+    }
+
+    return 255 * alpha;
 }
 
 Return<bool> FingerprintInscreen::shouldBoostBrightness() {

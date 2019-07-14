@@ -624,7 +624,7 @@
 
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
-    <integer name="config_screenBrightnessSettingDefault">97</integer>
+    <integer name="config_screenBrightnessSettingDefault">98</integer>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
@@ -673,12 +673,12 @@
     <!-- Flag specifying whether VoLTE should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
-     <bool name="config_carrier_volte_available">false</bool>
+     <bool name="config_carrier_volte_available">true</bool>
 
     <!-- Flag specifying whether WFC over IMS should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
-     <bool name="config_carrier_wfc_ims_available">false</bool>
+     <bool name="config_carrier_wfc_ims_available">true</bool>
 
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
      <bool name="config_cellBroadcastAppLinks">true</bool>
@@ -690,7 +690,7 @@
      <bool name="config_device_vt_available">true</bool>
 
     <!-- Flag specifying whether WFC over IMS is available on device -->
-     <bool name="config_device_wfc_ims_available">false</bool>
+     <bool name="config_device_wfc_ims_available">true</bool>
 
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
      <bool name="config_dynamic_bind_ims">true</bool>
@@ -1011,11 +1011,6 @@
          Refer to power.h for details.
     -->
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
-
-    <!-- Screen brightness used to dim the screen while dozing in a very low power state.
-         May be less than the minimum allowed brightness setting
-         that can be set by the user. -->
-    <integer name="config_screenBrightnessDoze">2</integer>
 
     <!-- If true, the doze component is not started until after the screen has been
          turned off and the screen off animation has been performed. -->
