@@ -31,10 +31,10 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 BEAST_BUILD_TYPE := OFFICIAL
 
-BUILD_FINGERPRINT := "Xiaomi/cepheus/cepheus:9/PKQ1.181121.001/9.3.1:user/release-keys"
+BUILD_FINGERPRINT := "Xiaomi/cepheus_eea/cepheus:9/PKQ1.181121.001/V10.2.15.0.PFAEUXM:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="cepheus-user 9 PKQ1.181121.001 9.3.1 release-keys" \
+    PRIVATE_BUILD_DESC="cepheus-user 9 PKQ1.181121.001 V10.2.15.0.PFAEUXM release-keys" \
     PRODUCT_NAME="cepheus" \
     TARGET_DEVICE="cepheus"
 
