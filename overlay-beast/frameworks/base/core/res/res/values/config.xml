@@ -57,7 +57,5 @@
     <bool name="config_proximityCheckOnWake">true</bool>
     <integer name="config_proximityCheckTimeout">200</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
-	
-    <!-- Whether notify fingerprint client of successful cancelled authentication -->
-    <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
+
 </resources>
