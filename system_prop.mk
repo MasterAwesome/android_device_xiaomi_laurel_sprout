@@ -118,6 +118,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.build.display.wtid.miui=SW_S88512AA1_V001_M13_XM_F9S_USR_MP \
 	ro.build.display.wtid.ato=SW_S88512AA1_V001_M13_XM_F9S_USR_ATO
 
+# GPS
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.overlay.izat.optin=rro
+
 # ETC
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.colorpick_adjust=true \
