@@ -48,6 +48,10 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbthost_if
+	
+# Bluetooth
+PRODUCT_PACKAGES += \
+    BluetoothResCommon
 
 # ANT+
 PRODUCT_PACKAGES += \

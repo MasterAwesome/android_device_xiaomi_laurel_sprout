@@ -2,6 +2,7 @@ on init
     mount none /sbin/chargeonlymode /sbin/charger bind
     mount none /system/etc/audio_effects.xml /vendor/etc/audio_effects.xml bind
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
+    mount none /system/overlay/BluetoothResCommon.apk /vendor/overlay/BluetoothResCommon.apk bind
     mount none /system/etc/media_codecs.xml /vendor/etc/media_codecs.xml bind
     mount none /system/lib64/soundfx/libvolumelistener.so /vendor/lib64/soundfx/libvolumelistener.so bind
     mount none /system/lib/soundfx/libvolumelistener.so /vendor/lib/soundfx/libvolumelistener.so bind
