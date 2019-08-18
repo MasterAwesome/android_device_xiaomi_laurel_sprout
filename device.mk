@@ -134,6 +134,10 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 	
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/nqnfcee_access.xml:system/etc/nqnfcee_access.xml \
+    $(LOCAL_PATH)/nfc/nqnfcse_access.xml:system/etc/nqnfcse_access.xml
+	
 # OTA
 PRODUCT_PACKAGES += \
     Updates
