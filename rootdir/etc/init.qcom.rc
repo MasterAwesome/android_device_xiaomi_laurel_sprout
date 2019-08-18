@@ -8,6 +8,16 @@ on init
     mount none /system/lib/soundfx/libvolumelistener.so /vendor/lib/soundfx/libvolumelistener.so bind
     mount none /system/lib64/hw/power.qcom.so /vendor/lib64/hw/power.qcom.so bind
     mount none /system/lib/soundfx/libjamesdsp.so /vendor/lib/soundfx/libjamesdsp.so bind
+    mount none /system/etc/placeholder /vendor/overlay/CarrierConfigResCommon.apk bind
+    mount none /system/etc/placeholder /vendor/overlay/CellBroadcastReceiverResCommon.apk bind
+    mount none /system/etc/placeholder /vendor/overlay/ChinaMobileFrameworksRes/ChinaMobileFrameworksRes.apk bind
+    mount none /system/etc/placeholder /vendor/overlay/CtNetworkSettingRes/CtNetworkSettingRes.apk bind
+    mount none /system/etc/placeholder /vendor/overlay/FrameworksResCommon.apk bind
+    mount none /system/etc/placeholder /vendor/overlay/MiuiBluetoothOverlay.apk bind
+    mount none /system/etc/placeholder /vendor/overlay/OptInAppOverlay/OptInAppOverlay.apk bind
+    mount none /system/etc/placeholder /vendor/overlay/SystemUIResCommon.apk bind
+    mount none /system/etc/placeholder /vendor/overlay/TelecommResCommon.apk bind
+    mount none /system/etc/placeholder /vendor/overlay/TelephonyResCommon.apk bind
 
     # Boot time FS tune
     write /sys/block/sda/queue/iostats 0
@@ -66,3 +76,4 @@ on property:sys.boot_completed=1
     write /sys/block/dm-1/queue/read_ahead_kb 128
     write /sys/block/dm-2/queue/read_ahead_kb 128
     write /sys/block/dm-3/queue/read_ahead_kb 128
+	

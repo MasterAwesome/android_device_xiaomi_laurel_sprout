@@ -142,6 +142,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Updates
 
+# Placeholder
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/placeholder:system/etc/placeholder
+
 # Power
 PRODUCT_PACKAGES += \
     power.qcom:64
