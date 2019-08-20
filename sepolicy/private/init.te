@@ -1,13 +1,11 @@
-# Allow init to chown/chmod on pseudo files in /sys
-allow init {
-    sysfs_graphics
-}:file { open read setattr };
+# Allow init to mount vendor configs
+allow init vendor_configs_file:file mounton;
+
+# Allow init to mount wlan kernel module
+allow init vendor_file:file mounton;
 
 # Allow init to mount offmode charging daemon
 allow init rootfs:file mounton;
-
-# Allow init to mount vendor configs
-allow init vendor_configs_file:file mounton;
 
 # Allow init to mount overlay files
 allow init vendor_overlay_file:file mounton;

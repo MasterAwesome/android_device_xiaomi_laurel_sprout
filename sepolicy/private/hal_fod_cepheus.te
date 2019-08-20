@@ -3,3 +3,8 @@ hal_server_domain(hal_fod_cepheus, hal_lineage_fod)
 
 type hal_fod_cepheus_exec, exec_type, file_type;
 init_daemon_domain(hal_fod_cepheus)
+
+allow hal_fod_cepheus hal_fingerprint_hwservice:hwservice_manager find;
+allow hal_fod_cepheus sysfs_graphics:file rw_file_perms;
+allow hal_fod_cepheus sysfs_tp_fodstatus:file rw_file_perms;
+binder_call(hal_fod_cepheus, hal_fingerprint)

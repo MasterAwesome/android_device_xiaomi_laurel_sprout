@@ -99,7 +99,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.mi_thermald.rc \
-    fstab.qcom
+    init.jamesdsp.sh
 
 # IR
 PRODUCT_PACKAGES += \
