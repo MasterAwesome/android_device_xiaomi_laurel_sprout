@@ -1,1 +1,2 @@
 vendor.camera.aux.packageblacklist u:object_r:vendor_camera_prop:s0
+com.caf.fmradio u:object_r:vendor_default_prop:s0
