@@ -10,5 +10,3 @@ allow hal_fod_cepheus sysfs_fod_hbm:file rw_file_perms;
 allow hal_fod_cepheus sysfs_tp_fodstatus:file rw_file_perms;
 
 binder_call(hal_fod_cepheus, hal_fingerprint)
-
-permissive hal_fod_cepheus;
