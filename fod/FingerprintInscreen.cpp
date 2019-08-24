@@ -36,7 +36,7 @@
 
 #define FOD_SENSOR_X 455
 #define FOD_SENSOR_Y 1920
-#define FOD_SENSOR_SIZE 173
+#define FOD_SENSOR_SIZE 190
 
 namespace {
 
