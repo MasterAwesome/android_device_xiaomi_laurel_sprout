@@ -35,7 +35,6 @@ lib64/libdpmtcm.so
 # Display postprocessing
 lib64/libdisplayfeature.so
 lib64/libdisplayfeatureservice.so
-lib64/libdisplayservicehidl.so
 lib64/libsdm-disp-apis.so
 lib64/vendor.display.color@1.0.so
 lib64/vendor.display.color@1.1.so
