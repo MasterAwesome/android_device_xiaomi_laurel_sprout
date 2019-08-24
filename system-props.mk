@@ -61,12 +61,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	
 # Display features
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.displayfeature.histogram.enable=true \
+    ro.colorpick_adjust=true \
+    ro.display.type=oled \
+    ro.xiaomi.bl.poll=true \
     ro.eyecare.brightness.threshold=11 \
     ro.eyecare.brightness.level=5 \
     ro.hist.brightness.threshold=7 \
+    ro.whitepoint_calibration_enable=false \
+    ro.displayfeature.histogram.enable=true \
+    persist.displayfeature.dc_backlight.threshold=610 \
+    sys.displayfeature_hidl=true \
     sys.displayfeature.hbm.enable=true \
-    sys.displayfeature_hidl=true
+    persist.displayfeature.dc_backlight.enable=false \
+    persist.fod.modified.dc_status=false \
 	
 # Display post-processing
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -123,10 +130,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_enable=true
 
-# Netflix custom property
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.netflix.bsp_rev=Q855-16947-1
-	
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.nfc.port=I2C
@@ -186,8 +189,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # WFD
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0 \
-    debug.sf.enable_hwc_vds=1
+    persist.sys.wfd.virtual=0
 	
 # WLAN
 PRODUCT_PROPERTY_OVERRIDES += \
