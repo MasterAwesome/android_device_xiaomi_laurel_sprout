@@ -77,12 +77,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q845-05000-1
 
-# Perf
+# IOP
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.core_ctl_min_cpu=2 \
-    ro.vendor.qti.core_ctl_max_cpu=4 \
+    vendor.iop.enable_uxe=0 \
     vendor.iop.enable_prefetch_ofr=0 \
-    vendor.iop.enable_uxe=0
+    vendor.perf.iop_v3.enable=true \
+    vendor.perf.gestureflingboost.enable=true \
+    vendor.perf.workloadclassifier.enable=true \
+    ro.vendor.at_library=libqti-at.so
 
 # RCS and IMS
 PRODUCT_PROPERTY_OVERRIDES += \
