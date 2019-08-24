@@ -139,6 +139,11 @@ PRODUCT_COPY_FILES += \
 # OTA
 PRODUCT_PACKAGES += \
     Updates
+	
+# Perf boot jars
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
 
 # Power
 PRODUCT_PACKAGES += \
