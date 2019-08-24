@@ -98,8 +98,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.qcom.rc \
-    init.mi_thermald.rc \
-    init.jamesdsp.sh
+    init.mi_thermald.rc
 
 # IR
 PRODUCT_PACKAGES += \
