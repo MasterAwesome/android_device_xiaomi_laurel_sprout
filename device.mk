@@ -128,13 +128,19 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    NfcNci \
-    Tag \
-    com.android.nfc_extras
+    com.android.nfc_extras \
+    com.gsma.services.nfc \
+    com.gsma.services.nfc.xml \
+    com.nxp.nfc.nq \
+    libnqnfc-nci \
+    nqnfcee_access.xml \
+    nqnfcse_access.xml \
+    NQNfcNci \
+    SecureElement \
+    Tag
 	
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/nfc/nqnfcee_access.xml:system/etc/nqnfcee_access.xml \
-    $(LOCAL_PATH)/nfc/nqnfcse_access.xml:system/etc/nqnfcse_access.xml
+PRODUCT_BOOT_JARS += \
+    com.nxp.nfc.nq
 	
 # OTA
 PRODUCT_PACKAGES += \
