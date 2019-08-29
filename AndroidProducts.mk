@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/beast_cepheus.mk
+    $(LOCAL_DIR)/beast_laurel_sprout.mk

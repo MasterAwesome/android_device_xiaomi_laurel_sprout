@@ -1,1 +1,1 @@
-add_lunch_combo beast_cepheus-userdebug
+add_lunch_combo beast_laurel_sprout-userdebug

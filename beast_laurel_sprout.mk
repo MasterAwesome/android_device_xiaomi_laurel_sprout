@@ -12,29 +12,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/xiaomi/cepheus/device.mk)
+$(call inherit-product, device/xiaomi/laurel_sprout/device.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit some common BeastROMs stuff.
 $(call inherit-product, vendor/beast/config/common.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_BOOT_ANIMATION_RES := 720
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := beast_cepheus
-PRODUCT_DEVICE := cepheus
+PRODUCT_NAME := beast_laurel_sprout
+PRODUCT_DEVICE := laurel_sprout
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := MI 9
+PRODUCT_MODEL := MI A3
 PRODUCT_MANUFACTURER := Xiaomi
 
 BEAST_BUILD_TYPE := OFFICIAL
 
-BUILD_FINGERPRINT := "Xiaomi/cepheus_eea/cepheus:9/PKQ1.181121.001/V10.2.15.0.PFAEUXM:user/release-keys"
+BUILD_FINGERPRINT := "Xiaomi/laurel_sprout_eea/laurel_sprout:9/PKQ1.190416.001/V10.3.5.0.PFQEUXM:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="cepheus-user 9 PKQ1.181121.001 V10.2.15.0.PFAEUXM release-keys" \
+    PRIVATE_BUILD_DESC="laurel_sprout-user 9 PKQ1.190416.001 V10.3.5.0.PFQEUXM release-keys" \
     PRODUCT_NAME="cepheus" \
     TARGET_DEVICE="cepheus"
 

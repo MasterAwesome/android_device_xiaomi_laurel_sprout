@@ -15,14 +15,24 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
-
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/cepheus/cepheus-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
+
+#A/B related packages
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_engine_client \
+    update_verifier \
+    bootctrl.trinket \
+    brillo_update_payload
+
+#Boot control HAL test app
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2340
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1560
+TARGET_SCREEN_WIDTH := 720
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -75,10 +85,19 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libqdMetaData.system \
     libvulkan
+	
+# FM
+PRODUCT_PACKAGES += \
+    FM2 \
+    libqcomfm_jni \
+    qcom.fmradio
+	
+PRODUCT_BOOT_JARS += \
+    qcom.fmradio
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_cepheus
+    lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_trinket
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -111,7 +130,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_msmnile
+    android.hardware.light@2.0-service.xiaomi_trinket
 	
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -126,30 +145,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
-# NFC
-PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    com.gsma.services.nfc \
-    com.gsma.services.nfc.xml \
-    com.nxp.nfc.nq \
-    libnqnfc-nci \
-    nqnfcee_access.xml \
-    nqnfcse_access.xml \
-    NQNfcNci \
-    SecureElement \
-    Tag
-	
-PRODUCT_BOOT_JARS += \
-    com.nxp.nfc.nq
-	
 # OTA
 PRODUCT_PACKAGES += \
     Updates
-	
-# Perf boot jars
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
 
 # Power
 PRODUCT_PACKAGES += \
@@ -188,3 +186,8 @@ PRODUCT_PACKAGES += \
 	
 PRODUCT_PACKAGES += \
     vndk_package
+	
+# Verity
+PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/4804000.ufshc/by-name/system
+PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc/4804000.ufshc/by-name/vendor
+$(call inherit-product, build/target/product/verity.mk)

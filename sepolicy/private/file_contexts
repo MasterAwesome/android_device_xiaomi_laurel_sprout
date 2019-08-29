@@ -21,9 +21,9 @@
 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm     u:object_r:sysfs_tp_fod_hbm:s0
 
 # HALs
-/system/bin/hw/lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_cepheus    u:object_r:hal_fod_cepheus_exec:s0
+/system/bin/hw/lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_trinket    u:object_r:hal_fod_trinket_exec:s0
 /system/bin/hw/lineage\.livedisplay@2\.0-service-sdm        u:object_r:shal_livedisplay_default_exec:s0
-/system/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_msmnile    u:object_r:hal_light_msmnile_exec:s0
+/system/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_trinket    u:object_r:hal_light_trinket_exec:s0
 
 # Media
 /system/etc/media_codecs.xml    u:object_r:vendor_configs_file:s0

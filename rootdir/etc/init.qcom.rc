@@ -9,8 +9,8 @@ on init
     mount none /system/lib/soundfx/libvolumelistener.so /vendor/lib/soundfx/libvolumelistener.so bind
     mount none /system/lib64/hw/power.qcom.so /vendor/lib64/hw/power.qcom.so bind
 	
-    chown system system /dev/input/event4
-    chmod 0664 /dev/input/event4
+    chown system system /dev/input/event5
+    chmod 0664 /dev/input/event5
 
     # Boot time FS tune
     write /sys/block/sda/queue/iostats 0
