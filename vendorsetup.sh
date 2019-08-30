@@ -1,1 +1,2 @@
 add_lunch_combo beast_laurel_sprout-userdebug
+export SKIP_ABI_CHECKS=true
