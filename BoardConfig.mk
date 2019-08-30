@@ -123,7 +123,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_ROOT_EXTRA_FOLDERS := product odm oem
 
 # Power
-TARGET_TAP_TO_WAKE_NODE := "/dev/input/event5"
+TARGET_TAP_TO_WAKE_NODE := "/dev/input/event2"
 
 # QCOM
 TARGET_USE_SDCLANG := true
