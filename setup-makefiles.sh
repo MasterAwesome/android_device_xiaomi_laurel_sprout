@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE=cepheus
+DEVICE=laurel_sprout
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2019
