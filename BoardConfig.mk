@@ -151,6 +151,7 @@ TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
 # Treble
 BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/laurel_sprout/BoardConfigVendor.mk
