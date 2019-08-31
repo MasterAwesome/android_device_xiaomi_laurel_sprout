@@ -14,6 +14,10 @@ on init
 	
     chown system system /dev/input/event2
     chmod 0664 /dev/input/event2
+	
+    # Goodix fingerprint
+    chmod 0666 /dev/goodix_fp
+    chown system system /dev/goodix_fp
 
     # Boot time FS tune
     write /sys/block/sda/queue/iostats 0
