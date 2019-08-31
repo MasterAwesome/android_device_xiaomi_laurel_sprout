@@ -1,5 +1,4 @@
 on init
-    mount none /sbin/chargeonlymode /sbin/charger bind
     mount none /system/lib/soundfx/libjamesdsp.so /vendor/lib/soundfx/libjamesdsp.so bind
     mount none /system/etc/audio_effects.xml /vendor/etc/audio_effects.xml bind
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind

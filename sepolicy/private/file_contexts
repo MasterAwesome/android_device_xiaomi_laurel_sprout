@@ -18,7 +18,6 @@
 
 # FOD related nodes
 /sys/devices/virtual/touch/tp_dev/fod_status                       u:object_r:sysfs_tp_fodstatus:s0
-/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm     u:object_r:sysfs_tp_fod_hbm:s0
 
 # HALs
 /system/bin/hw/lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_trinket    u:object_r:hal_fod_trinket_exec:s0
