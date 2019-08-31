@@ -130,12 +130,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.qcom.rc \
-    init.recovery.hlthchrg.rc \
-    init.recovery.logd.rc \
-    init.recovery.mksh.rc \
-    init.recovery.qcom.rc \
-    init.recovery.service.rc \
-    init.recovery.usb.rc
+    init.recovery.qcom.rc
 
 # IR
 PRODUCT_PACKAGES += \
@@ -162,6 +157,15 @@ PRODUCT_PACKAGES += \
 # OTA
 PRODUCT_PACKAGES += \
     Updates
+	
+# Perf boot jars
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+	
+# Placeholder
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/placeholder:system/etc/placeholder
 
 # Power
 PRODUCT_PACKAGES += \

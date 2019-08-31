@@ -15,7 +15,7 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=RUIM
 DEVICE_PROVISIONED=1
-ro.telephony.default_network=9,9
+ro.telephony.default_network=22,22
 
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
@@ -74,10 +74,6 @@ ro.bluetooth.emb_wp_mode=false
 ro.bluetooth.wipower=false
 persist.vendor.btstack.enable.twsplus=true
 persist.vendor.btstack.connect.peer_earbud=true
-
-#system prop for wipower support
-ro.bluetooth.emb_wp_mode=true
-ro.bluetooth.wipower=true
 
 #
 #snapdragon value add features
@@ -172,15 +168,16 @@ vendor.perf.workloadclassifier.enable=true
 persist.vendor.debug.sensors.hal=i
 persist.vendor.debug.sensors.daemon=i
 
-#HONGMI-57905,huangrongbiao.wt,modify,load prop file with boardid
-ro.product.wtdevice=S88512BA1
-ro.build.display.wtid.miui=SW_S88512AA1_V001_M13_XM_F9S_USR_MP
-ro.build.display.wtid.ato=SW_S88512AA1_V001_M13_XM_F9S_USR_ATO
 
 persist.vendor.ctm.disallowed=1
 
 persist.sys.chgdisabled=0
 
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+persist.radio.VT_HYBRID_ENABLE=1
+persist.vendor.data.iwlan.enable=true
 persist.radio.NO_STAPA=1
 
 ro.sarbackoff.function=1
