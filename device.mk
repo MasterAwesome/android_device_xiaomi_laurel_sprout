@@ -39,6 +39,12 @@ PRODUCT_PACKAGES += update_engine \
 #Boot control HAL test app
 PRODUCT_PACKAGES_DEBUG += bootctl
 
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    bootctrl.trinket \
+    libcutils \
+    libgptutils \
+    libz
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1560
 TARGET_SCREEN_WIDTH := 720
