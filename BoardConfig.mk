@@ -24,9 +24,6 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 
-# Android generic system image always create metadata partition
-BOARD_USES_METADATA_PARTITION := true
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -118,7 +115,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
 
-BOARD_ROOT_EXTRA_FOLDERS := product odm oem
+BOARD_ROOT_EXTRA_FOLDERS := persist product odm oem
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/dev/input/event2"

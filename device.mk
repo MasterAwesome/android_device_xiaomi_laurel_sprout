@@ -26,15 +26,18 @@ AB_OTA_PARTITIONS += \
     dtbo \
     system \
     vbmeta
+	
+#A/B related packages
+PRODUCT_PACKAGES += update_engine \
+    update_engine_client \
+    update_verifier \
+    bootctrl.trinket \
+    brillo_update_payload \
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-service
 
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
-    FILESYSTEM_TYPE_system=ext4 \
-    POSTINSTALL_OPTIONAL_system=true
-
-PRODUCT_PACKAGES += \
-    otapreopt_script
+#Boot control HAL test app
+PRODUCT_PACKAGES_DEBUG += bootctl
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1560
@@ -57,9 +60,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:system/etc/audio_effects.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 	
-# Boot control
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -123,7 +123,13 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.qcom.rc
+    init.qcom.rc \
+    init.recovery.hlthchrg.rc \
+    init.recovery.logd.rc \
+    init.recovery.mksh.rc \
+    init.recovery.qcom.rc \
+    init.recovery.service.rc \
+    init.recovery.usb.rc
 
 # IR
 PRODUCT_PACKAGES += \
@@ -137,10 +143,6 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_trinket
-	
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service-sdm
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -174,22 +176,6 @@ PRODUCT_PACKAGES += \
     rcs_service_aidl.xml \
     rcs_service_api \
     rcs_service_api.xml
-	
-# Update engine
-PRODUCT_PACKAGES += \
-    brillo_update_payload \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.trinket \
-    libcutils \
-    libgptutils \
-    libz \
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
 
 # Telephony
 PRODUCT_PACKAGES += \
