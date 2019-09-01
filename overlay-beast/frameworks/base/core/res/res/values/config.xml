@@ -54,5 +54,8 @@
     <bool name="config_proximityCheckOnWake">true</bool>
     <integer name="config_proximityCheckTimeout">200</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
+	
+    <!-- Whether device ignores the RSSNR signal implementation -->
+    <bool name="config_ignoreRssnrSignalLevel">true</bool>
 
 </resources>
