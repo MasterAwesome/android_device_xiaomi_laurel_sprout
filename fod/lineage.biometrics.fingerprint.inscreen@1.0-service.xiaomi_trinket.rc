@@ -2,5 +2,18 @@ service fingerprint-inscreen-1-0 /system/bin/hw/lineage.biometrics.fingerprint.i
     interface vendor.lineage.biometrics.fingerprint.inscreen@1.0::IFingerprintInscreen default
     class hal
     user system
-    group system
+    group system input
     shutdown critical
+
+on init
+    # Goodix fingerprint
+    chown system system /dev/goodix_fp
+
+on boot
+    chown system system /sys/class/touch/tp_dev/aod_status
+    chmod 0644 /sys/class/touch/tp_dev/aod_status
+    chown system system /sys/class/touch/tp_dev/fod_status
+    chmod 0644 /sys/class/touch/tp_dev/fod_status
+    chown system system /sys/class/drm/card0-DSI-1/disp_param
+    chmod 0700 /sys/class/drm/card0-DSI-1/disp_param
+    chmod 0666 /dev/input/event1

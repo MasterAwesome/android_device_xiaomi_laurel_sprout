@@ -17,7 +17,7 @@
 /persist(/.*)?           u:object_r:persist_file:s0
 
 # FOD related nodes
-/sys/devices/virtual/touch/tp_dev/fod_status                       u:object_r:sysfs_tp_fodstatus:s0
+/sys/class/touch/tp_dev/fod_status                       u:object_r:sysfs_tp_fodstatus:s0
 
 # HALs
 /system/bin/hw/lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_trinket    u:object_r:hal_fod_trinket_exec:s0
