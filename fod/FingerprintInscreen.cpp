@@ -28,7 +28,7 @@
 
 #define DISPPARAM_PATH "/sys/class/drm/card0-DSI-1/disp_param"
 #define DISPPARAM_FOD_BACKLIGHT_HBM "0x1D007FF"
-#define DISPPARAM_FOD_BACKLIGHT_RESET "0x2D01000"
+#define DISPPARAM_FOD_BACKLIGHT_RESET "0x20f0000"
 
 #define FOD_STATUS_PATH "/sys/class/touch/tp_dev/fod_status"
 #define FOD_STATUS_ON 1
@@ -36,7 +36,7 @@
 
 #define FOD_SENSOR_X 293
 #define FOD_SENSOR_Y 1356
-#define FOD_SENSOR_SIZE 135
+#define FOD_SENSOR_SIZE 134
 
 namespace {
 
