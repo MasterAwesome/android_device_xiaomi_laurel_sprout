@@ -8,9 +8,11 @@ type pps_socket, file_type;
 type sysfs_graphics, sysfs_type, fs_type;
 
 type sysfs_led, sysfs_type, fs_type;
-type sysfs_white_led, sysfs_type, fs_type;
+type sysfs_red_led, sysfs_type, fs_type;
 
 type sysfs_battery_supply, sysfs_type, fs_type;
 type sysfs_usb_supply, sysfs_type, fs_type;
 
+type sysfs_tp_dispparam, sysfs_type, fs_type;
+type sysfs_tp_aodstatus, sysfs_type, fs_type;
 type sysfs_tp_fodstatus, sysfs_type, fs_type;

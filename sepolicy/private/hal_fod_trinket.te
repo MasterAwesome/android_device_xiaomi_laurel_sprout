@@ -17,4 +17,6 @@ allow hal_fod_trinket hal_display_hwservice:hwservice_manager find;
 allow hal_fod_trinket hal_fingerprint_hwservice:hwservice_manager find;
 
 allow hal_fod_trinket sysfs_graphics:file rw_file_perms;
+allow hal_fod_trinket sysfs_tp_dispparam:file rw_file_perms;
+allow hal_fod_trinket sysfs_tp_aodstatus:file rw_file_perms;
 allow hal_fod_trinket sysfs_tp_fodstatus:file rw_file_perms;
