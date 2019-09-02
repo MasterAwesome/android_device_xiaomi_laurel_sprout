@@ -162,6 +162,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Updates
 	
+# Perf boot jars
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+	
 # Placeholder
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/placeholder:system/etc/placeholder
