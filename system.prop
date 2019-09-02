@@ -164,11 +164,6 @@ vendor.perf.gestureflingboost.enable=true
 #Property to enable WorkloadClassifier
 vendor.perf.workloadclassifier.enable=true
 
-#bug436046,sensors-hal debug,zhouyuqiong.wt
-persist.vendor.debug.sensors.hal=i
-persist.vendor.debug.sensors.daemon=i
-
-
 persist.vendor.ctm.disallowed=1
 
 persist.sys.chgdisabled=0
