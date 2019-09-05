@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The PixelExperience Project
+# Copyright (C) 2019 BeastROMs
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,3 +15,6 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/beast_laurel_sprout.mk
+	
+COMMON_LUNCH_CHOICES := \
+    beast_laurel_sprout-userdebug

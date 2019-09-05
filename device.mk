@@ -27,17 +27,20 @@ AB_OTA_PARTITIONS += \
     system \
     vbmeta
 	
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_system=true \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
+    FILESYSTEM_TYPE_system=ext4 \
+    POSTINSTALL_OPTIONAL_system=true
+	
 #A/B related packages
-PRODUCT_PACKAGES += update_engine \
-    update_engine_client \
-    update_verifier \
-    bootctrl.trinket \
-    brillo_update_payload \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+PRODUCT_PACKAGES += \
+    update_engine_client
 
 #Boot control HAL test app
-PRODUCT_PACKAGES_DEBUG += bootctl
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl \
+    update_engine_client
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.trinket \
@@ -71,16 +74,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libbthost_if
 	
-# Bluetooth
-PRODUCT_PACKAGES += \
-    BluetoothResCommon
-
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
 
 # Camera
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     Snap
 
 # CNE
@@ -100,12 +99,12 @@ PRODUCT_PACKAGES += \
     libvulkan
 	
 # FM
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
     qcom.fmradio
 	
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     qcom.fmradio
 
 # Fingerprint
@@ -145,10 +144,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_trinket
 	
-# Livedisplay
-PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service-sdm
-
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles_vendor.xml:system/etc/media_profiles_vendor.xml \
@@ -163,7 +158,7 @@ PRODUCT_PACKAGES += \
     Updates
 	
 # Perf boot jars
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     QPerformance \
     UxPerformance
 	
@@ -196,7 +191,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # TextClassifier

@@ -20,8 +20,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit some common BeastROMs stuff.
-$(call inherit-product, vendor/beast/config/common.mk)
+$(call inherit-product, vendor/beast/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
+
+# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := beast_laurel_sprout
@@ -29,8 +35,6 @@ PRODUCT_DEVICE := laurel_sprout
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI A3
 PRODUCT_MANUFACTURER := Xiaomi
-
-BEAST_BUILD_TYPE := OFFICIAL
 
 BUILD_FINGERPRINT := "Xiaomi/laurel_sprout_eea/laurel_sprout:9/PKQ1.190416.001/V10.3.7.0.PFQEUXM:user/release-keys"
 
