@@ -23,8 +23,8 @@ dev.pm.dyn_samplingrate=1
 #
 # system props for the cne module
 #
-persist.vendor.cne.feature=1
-persist.dpm.feature=1
+persist.vendor.cne.feature=0
+persist.dpm.feature=0
 
 #system props for the MM modules
 media.stagefright.enable-player=true
@@ -188,3 +188,7 @@ persist.vendor.radio.ignore_dom_time=5
 ro.signal.five = true
 
 persist.rcs.supported = 0
+
+persist.bluetooth.bluetooth_audio_hal.disabled=true
+
+ro.surface_flinger.protected_contents=true

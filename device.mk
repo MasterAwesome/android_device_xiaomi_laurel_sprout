@@ -16,7 +16,7 @@
 #
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
+#$(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
 
 # A/B
 AB_OTA_UPDATER := true
@@ -47,10 +47,31 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     libcutils \
     libgptutils \
     libz
+	
+# Board
+PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_BOARD_PLATFORM := trinket
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1560
 TARGET_SCREEN_WIDTH := 720
+
+# Some GSI builds enable dexpreopt, whitelist these preopt files
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_WHITELIST += %.odex %.vdex %.art
+
+# Exclude GSI specific files
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_WHITELIST += \
+    system/etc/init/config/skip_mount.cfg \
+    system/etc/init/init.qcom.rc
+
+# Exclude all files under system/product and system/product_services
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_WHITELIST += \
+    system/product/% \
+    system/product_services/%
+	
+# GSI specific tasks on boot
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/skip_mount.cfg:system/etc/init/config/skip_mount.cfg
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -83,13 +104,13 @@ PRODUCT_PACKAGES += \
     Snap
 
 # CNE
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     cneapiclient \
     com.quicinc.cne \
     services-ext
 	
 # Device-specific settings
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     XiaomiParts
 
 # Display
@@ -115,7 +136,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0_system
-	
+
 #Hotspot
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hostapd.accept:system/etc/hostapd/hostapd.accept \
@@ -125,6 +146,9 @@ PRODUCT_COPY_FILES += \
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common
+	
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:system/etc/permissions/android.hardware.telephony.ims.xml \
 
 # Init
 PRODUCT_PACKAGES += \
@@ -154,7 +178,7 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # OTA
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     Updates
 	
 # Perf boot jars
@@ -186,6 +210,10 @@ PRODUCT_PACKAGES += \
     rcs_service_aidl.xml \
     rcs_service_api \
     rcs_service_api.xml
+	
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    device/xiaomi/laurel_sprout
 
 # Telephony
 PRODUCT_PACKAGES += \

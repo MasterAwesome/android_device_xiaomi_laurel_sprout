@@ -126,14 +126,10 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
 
-BOARD_ROOT_EXTRA_FOLDERS := persist product odm oem
-
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/dev/input/event2"
 
 # QCOM
-BOARD_USES_QCOM_HARDWARE := true
-PRODUCT_USES_QCOM_HARDWARE := true
 #TARGET_USE_SDCLANG := true
 
 # Recovery
@@ -152,8 +148,6 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
 
-# Telephony
-TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
 
 # Treble
 BOARD_VNDK_VERSION := current
