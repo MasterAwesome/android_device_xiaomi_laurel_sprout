@@ -16,7 +16,7 @@
 #
 
 # Get non-open-source specific aspects
-#$(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
 
 # A/B
 AB_OTA_UPDATER := true
@@ -198,7 +198,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/permissions/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
-    $(LOCAL_PATH)/permissions/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
+    $(LOCAL_PATH)/permissions/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
+    $(LOCAL_PATH)/permissions/android.software.secure_lock_screen.xml:system/etc/permissions/android.software.secure_lock_screen.xml
 
 # QMI
 PRODUCT_PACKAGES += \

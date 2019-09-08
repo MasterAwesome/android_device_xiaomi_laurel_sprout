@@ -17,9 +17,6 @@ ril.subscription.types=RUIM
 DEVICE_PROVISIONED=1
 ro.telephony.default_network=22,22
 
-dalvik.vm.heapsize=36m
-dev.pm.dyn_samplingrate=1
-
 #
 # system props for the cne module
 #
@@ -80,12 +77,6 @@ persist.vendor.btstack.connect.peer_earbud=true
 #
 ro.qc.sdk.audio.ssr=false
 
-##fluencetype can be "fluence" or "fluencepro" or "none"
-ro.qc.sdk.audio.fluencetype=none
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=false
-persist.audio.fluence.speaker=true
-
 #system prop for RmNet Data
 persist.data.df.dev_name=rmnet_usb0
 
@@ -94,17 +85,9 @@ persist.debug.wfd.enable=1
 ##property to choose between virtual/external wfd display
 persist.sys.wfd.virtual=0
 
-# enable tunnel encoding for amrwb
-tunnel.audio.encode = true
-
-#Buffer size in kbytes for compress offload playback
-audio.offload.buffer.size.kb=32
 
 #Enable offload audio video playback by default
 av.offload.enable=true
-
-#enable voice path for PCM VoIP by default
-use.voice.path.for.pcm.voip=true
 
 #enable dsp gapless mode by default
 audio.offload.gapless.enabled=true
@@ -115,27 +98,9 @@ sys.qca1530=detect
 #Enable stm events
 persist.debug.coresight.config=stm-events
 
-#Enable virtual display.
-debug.sf.enable_hwc_vds=1
-
-#hwui properties
-ro.hwui.texture_cache_size=72
-ro.hwui.layer_cache_size=48
-ro.hwui.r_buffer_cache_size=8
-ro.hwui.path_cache_size=32
-ro.hwui.gradient_cache_size=1
-ro.hwui.drop_shadow_cache_size=6
-ro.hwui.texture_cache_flushrate=0.4
-ro.hwui.text_small_cache_width=1024
-ro.hwui.text_small_cache_height=1024
-ro.hwui.text_large_cache_width=2048
-ro.hwui.text_large_cache_height=1024
-
 config.disable_rtt=true
 
 #Bringup properties
-persist.radio.atfwd.start=false
-ro.kernel.qemu.gles=0
 qemu.hw.mainkeys=0
 
 #Increase cached app limit
@@ -152,18 +117,6 @@ persist.camera.privapp.list=org.codeaurora.snapcam
 #Extb59550,tiantian.wt, modify, 20190426, modify for close pdaf focus box
 persist.vendor.camera.stats.test=0
 
-#IOP properties
-vendor.iop.enable_uxe=1
-
-#adjust voice call volume steps
-ro.config.vc_call_vol_steps=11
-
-#Property to enable perf boosts from System Server
-vendor.perf.gestureflingboost.enable=true
-
-#Property to enable WorkloadClassifier
-vendor.perf.workloadclassifier.enable=true
-
 persist.vendor.ctm.disallowed=1
 
 persist.sys.chgdisabled=0
@@ -175,13 +128,6 @@ persist.radio.VT_HYBRID_ENABLE=1
 persist.vendor.data.iwlan.enable=true
 persist.radio.NO_STAPA=1
 
-ro.sarbackoff.function=1
-ro.sardebug=0
-
-ro.colorpick_adjust=true
-sys.paper_mode_max_level=255
-ro.df.effect.conflict=1
-
 #Checklist 26199, add by yushaojian on 2019-05-10
 persist.vendor.radio.ignore_dom_time=5
 
@@ -192,3 +138,21 @@ persist.rcs.supported = 0
 persist.bluetooth.bluetooth_audio_hal.disabled=true
 
 ro.surface_flinger.protected_contents=true
+persist.sys.overlay.nightmode=true
+
+# GSI always generate dex pre-opt in system image
+ro.cp_system_other_odex=0
+
+# GSI disables non-AOSP nnapi extensions on product partition
+ro.nnapi.extensions.deny_on_product=true
+
+# TODO(b/120679683): disable RescueParty before all problem apps solved
+persist.sys.disable_rescue=true
+
+# TODO(b/78105955): disable privapp_permissions checking before the bug solved
+ro.control_privapp_permissions=disable
+
+# TODO(b/136212765): the default for LMK
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=100
+ro.lmk.use_minfree_levels=true
