@@ -156,3 +156,8 @@ ro.control_privapp_permissions=disable
 ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=100
 ro.lmk.use_minfree_levels=true
+
+debug.sf.early_phase_offset_ns=1500000
+debug.sf.early_app_phase_offset_ns=1500000
+debug.sf.early_gl_phase_offset_ns=3000000
+debug.sf.early_gl_app_phase_offset_ns=15000000
