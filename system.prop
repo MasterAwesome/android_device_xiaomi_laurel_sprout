@@ -2,6 +2,9 @@
 # system.prop for trinket
 #
 
+ro.telephony.default_network=22,22
+telephony.lteOnCdmaDevice=1
+
 audio.offload.min.duration.secs=30
 persist.vendor.audio.hac.enable=false
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
