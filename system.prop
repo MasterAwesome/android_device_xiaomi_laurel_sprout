@@ -2,43 +2,13 @@
 # system.prop for trinket
 #
 
-rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
-#rild.libargs=-d /dev/smd0
-persist.rild.nitz_plmn=
-persist.rild.nitz_long_ons_0=
-persist.rild.nitz_long_ons_1=
-persist.rild.nitz_long_ons_2=
-persist.rild.nitz_long_ons_3=
-persist.rild.nitz_short_ons_0=
-persist.rild.nitz_short_ons_1=
-persist.rild.nitz_short_ons_2=
-persist.rild.nitz_short_ons_3=
-ril.subscription.types=RUIM
-DEVICE_PROVISIONED=1
-ro.telephony.default_network=22,22
+audio.offload.min.duration.secs=30
+persist.vendor.audio.hac.enable=false
+persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=7
 
-#
-# system props for the cne module
-#
-persist.vendor.cne.feature=0
-persist.dpm.feature=0
-
-#system props for the MM modules
-media.stagefright.enable-player=true
-media.stagefright.enable-http=true
-media.stagefright.enable-aac=true
-media.stagefright.enable-qcp=true
-media.stagefright.enable-fma2dp=true
-media.stagefright.enable-scan=true
-mmp.enable.3g2=true
-media.aac_51_output_enabled=true
-mm.enable.smoothstreaming=true
 media.settings.xml=/system/etc/media_profiles_vendor.xml
-#13631487 is decimal sum of supported codecs in AAL
-#codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF AVI DTS FLV 3GP 3G2 MKV MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF APE DSD MOV XVID
-vendor.mm.enable.qcom_parser=63963135
-persist.mm.enable.prefetch=true
-qcom.hw.aac.encoder=true
 
 #Netflix custom property
 ro.netflix.bsp_rev=Q6125-17995-1
@@ -55,15 +25,6 @@ persist.timed.enable=true
 # system property for maximum number of HFP client connections
 bt.max.hfpclient.connections=1
 
-#
-# System props for telephony
-# System prop to turn on CdmaLTEPhone always
-telephony.lteOnCdmaDevice=1
-
-#Simulate sdcard on /data/media
-#
-persist.fuse_sdcard=true
-
 #system prop for Bluetooth SOC type
 bt.max.hfpclient.connections=1
 vendor.bluetooth.soc=cherokee
@@ -71,11 +32,6 @@ ro.bluetooth.emb_wp_mode=false
 ro.bluetooth.wipower=false
 persist.vendor.btstack.enable.twsplus=true
 persist.vendor.btstack.connect.peer_earbud=true
-
-#
-#snapdragon value add features
-#
-ro.qc.sdk.audio.ssr=false
 
 #system prop for RmNet Data
 persist.data.df.dev_name=rmnet_usb0
@@ -85,26 +41,11 @@ persist.debug.wfd.enable=1
 ##property to choose between virtual/external wfd display
 persist.sys.wfd.virtual=0
 
-
-#Enable offload audio video playback by default
-av.offload.enable=true
-
-#enable dsp gapless mode by default
-audio.offload.gapless.enabled=true
-
 #initialize QCA1530 detection
 sys.qca1530=detect
 
-#Enable stm events
-persist.debug.coresight.config=stm-events
-
-config.disable_rtt=true
-
 #Bringup properties
 qemu.hw.mainkeys=0
-
-#Increase cached app limit
-ro.vendor.qti.sys.fw.bg_apps_limit=60
 
 #Expose aux camera for below packages
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.factory.mmigroup
@@ -117,10 +58,6 @@ persist.camera.privapp.list=org.codeaurora.snapcam
 #Extb59550,tiantian.wt, modify, 20190426, modify for close pdaf focus box
 persist.vendor.camera.stats.test=0
 
-persist.vendor.ctm.disallowed=1
-
-persist.sys.chgdisabled=0
-
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
@@ -130,10 +67,6 @@ persist.radio.NO_STAPA=1
 
 #Checklist 26199, add by yushaojian on 2019-05-10
 persist.vendor.radio.ignore_dom_time=5
-
-ro.signal.five = true
-
-persist.rcs.supported = 0
 
 persist.bluetooth.bluetooth_audio_hal.disabled=true
 

@@ -18,6 +18,8 @@
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
 
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
 # A/B
 AB_OTA_UPDATER := true
 
@@ -61,8 +63,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_WHITELIST += %.odex %.vdex %.art
 
 # Exclude GSI specific files
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_WHITELIST += \
-    system/etc/init/config/skip_mount.cfg \
-    system/etc/init/init.qcom.rc
+    system/etc/init/config/skip_mount.cfg
 
 # Exclude all files under system/product and system/product_services
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_WHITELIST += \
@@ -84,34 +85,15 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default
-
+    audio.a2dp.default \
+    libaacwrapper
+	
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.xml:system/etc/audio_effects.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
-	
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    libbthost_if
-	
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
-
-# Camera
-#PRODUCT_PACKAGES += \
-    Snap
-
-# CNE
-#PRODUCT_PACKAGES += \
-    cneapiclient \
-    com.quicinc.cne \
-    services-ext
-	
-# Device-specific settings
-#PRODUCT_PACKAGES += \
-    XiaomiParts
 
 # Display
 PRODUCT_PACKAGES += \
@@ -132,33 +114,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_trinket
 
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.base@1.0_system \
-    android.hidl.manager@1.0_system
-
 #Hotspot
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hostapd.accept:system/etc/hostapd/hostapd.accept \
     $(LOCAL_PATH)/configs/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
     $(LOCAL_PATH)/configs/hostapd.deny:system/etc/hostapd/hostapd.deny
 
-# IMS
-PRODUCT_PACKAGES += \
-    ims-ext-common
-	
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:system/etc/permissions/android.hardware.telephony.ims.xml \
-
 # Init
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc
-
-# IR
-PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0-service
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
@@ -170,8 +135,7 @@ PRODUCT_PACKAGES += \
 	
 # Media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_profiles_vendor.xml:system/etc/media_profiles_vendor.xml \
-    $(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml
+    $(LOCAL_PATH)/configs/media_profiles_vendor.xml:system/etc/media_profiles_vendor.xml
 
 # Net
 PRODUCT_PACKAGES += \
@@ -180,11 +144,6 @@ PRODUCT_PACKAGES += \
 # OTA
 #PRODUCT_PACKAGES += \
     Updates
-	
-# Perf boot jars
-#PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
 	
 # Placeholder
 PRODUCT_COPY_FILES += \
@@ -196,36 +155,17 @@ PRODUCT_PACKAGES += \
 
 # QCOM
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
-    $(LOCAL_PATH)/permissions/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/permissions/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
     $(LOCAL_PATH)/permissions/android.software.secure_lock_screen.xml:system/etc/permissions/android.software.secure_lock_screen.xml
 
-# QMI
-PRODUCT_PACKAGES += \
-    libjson
-
-# RCS
-PRODUCT_PACKAGES += \
-    rcs_service_aidl \
-    rcs_service_aidl.xml \
-    rcs_service_api \
-    rcs_service_api.xml
-	
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     device/xiaomi/laurel_sprout
 
 # Telephony
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     telephony-ext
 
 #PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# TextClassifier
-PRODUCT_PACKAGES += \
-    textclassifier.bundle1
-	
-PRODUCT_PACKAGES += \
-    vndk_package

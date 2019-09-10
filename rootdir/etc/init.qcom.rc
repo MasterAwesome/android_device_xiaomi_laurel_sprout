@@ -1,14 +1,11 @@
-on init
-    mount none /system/etc/audio_effects.xml /vendor/etc/audio_effects.xml bind
+on post-fs
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
-    mount none /system/etc/media_codecs.xml /vendor/etc/media_codecs.xml bind
+	mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio_policy_configuration.xml bind
     mount none /system/lib64/soundfx/libvolumelistener.so /vendor/lib64/soundfx/libvolumelistener.so bind
     mount none /system/lib/soundfx/libvolumelistener.so /vendor/lib/soundfx/libvolumelistener.so bind
     mount none /system/lib64/hw/power.qcom.so /vendor/lib64/hw/power.qcom.so bind
-    mount none /system/etc/placeholder /vendor/overlay/FrameworksResCommon.apk bind
-    mount none /system/etc/placeholder /vendor/overlay/SystemUIResCommon.apk bind
-    mount none /system/etc/placeholder /vendor/overlay/OptInAppOverlay/OptInAppOverlay.apk bind
-	
+
+on boot
     chown system system /dev/input/event2
     chmod 0664 /dev/input/event2
 	
