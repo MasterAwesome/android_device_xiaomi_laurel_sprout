@@ -55,6 +55,10 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     libgptutils \
     libz
 	
+# Bluetooth
+PRODUCT_PACKAGES += \
+    BluetoothResCommon
+	
 # Board
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := trinket
