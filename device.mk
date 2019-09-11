@@ -22,7 +22,8 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
+    $(LOCAL_PATH)/permissions/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 
 # A/B
 AB_OTA_UPDATER := true
@@ -156,11 +157,6 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     power.qcom:64
-
-# QCOM
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/permissions/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
-    $(LOCAL_PATH)/permissions/android.software.secure_lock_screen.xml:system/etc/permissions/android.software.secure_lock_screen.xml
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
