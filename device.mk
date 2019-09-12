@@ -133,6 +133,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc
+	
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml
+	
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:system/etc/permissions/android.hardware.telephony.ims.xml
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
@@ -167,9 +175,13 @@ PRODUCT_SOONG_NAMESPACES += \
     device/xiaomi/laurel_sprout
 
 # Telephony
-#PRODUCT_PACKAGES += \
-    telephony-ext
+PRODUCT_PACKAGES += \
+    telephony-ext \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml
 
-#PRODUCT_BOOT_JARS += \
+PRODUCT_BOOT_JARS += \
     telephony-ext
 
