@@ -37,8 +37,7 @@ BUILD_FINGERPRINT := "Xiaomi/laurel_sprout/laurel_sprout:10/QKQ1.190910.002/V11.
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="qssi-user 10 QKQ1.190910.002 V11.0.14.0.QFQMIXM release-keys" \
-    PRODUCT_NAME="laurel_sprout" \
-    TARGET_DEVICE="laurel_sprout"
+    PRODUCT_NAME="laurel_sprout"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
