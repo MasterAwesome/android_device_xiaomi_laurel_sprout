@@ -1,8 +1,11 @@
 type hal_fod_trinket, coredomain, domain;
 hal_server_domain(hal_fod_trinket, hal_lineage_fod)
 
-type hal_fod_trinket_exec, exec_type, file_type;
+type hal_fod_trinket_exec, system_file_type, exec_type, file_type;
 init_daemon_domain(hal_fod_trinket)
+
+# Allow access to the HALs
+hal_client_domain(hal_fod_trinket, hal_fingerprint)
 
 # Allow binder communication with hal_fingerprint
 binder_call(hal_fod_trinket, hal_fingerprint)
