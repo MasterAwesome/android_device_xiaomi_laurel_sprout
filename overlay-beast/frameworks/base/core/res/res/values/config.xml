@@ -21,29 +21,8 @@
      for different hardware and product builds.  Do not translate. -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Whether to allow sending active app broadcast -->
-    <bool name="config_allowActivePackageBroadcast">true</bool>
-
-    <!-- Whether device has a physical display cutout -->
-    <bool name="config_physicalDisplayCutout">true</bool>
-	
-     <!-- Does the battery LED support multiple colors?
-         Used to decide if the user can change the colors -->
-    <bool name="config_multiColorBatteryLed">false</bool>
-	
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
-
-    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveBatteryLed">true</bool>
-	
-    <!-- Smart charge sysfs node and value for suspend/resume charging-->
-    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
-    <string name="config_SmartChargingSupspendValue" translatable="false">1</string>
-    <string name="config_SmartChargingResumeValue" translatable="false">0</string>
-	
-    <!-- Whether the device has outdated qti-telephony-common.jar -->
-    <bool name="config_oldQtiTelephony">false</bool>
 	
     <!-- Show a custom view for FOD -->
     <bool name="config_needCustomFODView">true</bool>
@@ -57,5 +36,4 @@
 	
     <!-- Whether device ignores the RSSNR signal implementation -->
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
-
 </resources>
