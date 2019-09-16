@@ -42,7 +42,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 PRODUCT_PACKAGES += \
     otapreopt_script
-	
+
 # Board
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := trinket
@@ -62,7 +62,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_WHITELIST += \
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_WHITELIST += \
     system/product/% \
     system/product_services/%
-	
+
 # GSI specific tasks on boot
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/skip_mount.cfg:system/etc/init/config/skip_mount.cfg
@@ -80,23 +80,23 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     libaacwrapper
-	
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService
-	
+
 # Boot control
 PRODUCT_PACKAGES_DEBUG += \
     android.hardware.boot@1.0-impl.recovery \
     bootctl
-	
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     BluetoothResCommon
-	
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -106,13 +106,13 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libqdMetaData.system \
     libvulkan
-	
+
 # FM
 #PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
     qcom.fmradio
-	
+
 #PRODUCT_BOOT_JARS += \
     qcom.fmradio
 
@@ -131,12 +131,11 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
-	
+
 # IMS
 PRODUCT_PACKAGES += \
-    ims-ext-common \
     ims_ext_common.xml
-	
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:system/etc/permissions/android.hardware.telephony.ims.xml
 
@@ -147,7 +146,7 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_trinket
-	
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles_vendor.xml:system/etc/media_profiles_vendor.xml
@@ -159,7 +158,7 @@ PRODUCT_PACKAGES += \
 # OTA
 #PRODUCT_PACKAGES += \
     Updates
-	
+
 # Placeholder
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/placeholder:system/etc/placeholder
@@ -175,14 +174,16 @@ PRODUCT_SOONG_NAMESPACES += \
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext \
+    ims-ext-common_system \
     qti-telephony-utils \
     qti_telephony_utils.xml \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml
 
 PRODUCT_BOOT_JARS += \
+    ims-ext-common_system \
     telephony-ext
-	
+
 # Update engine
 PRODUCT_PACKAGES += \
     bootctrl.trinket.recovery \
