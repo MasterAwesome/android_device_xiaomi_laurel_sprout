@@ -20,6 +20,9 @@ $(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vend
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 28
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -83,7 +86,8 @@ PRODUCT_PACKAGES += \
     libaacwrapper
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
+    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml
 
 # ANT+
 PRODUCT_PACKAGES += \

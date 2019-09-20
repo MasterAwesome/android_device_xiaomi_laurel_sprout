@@ -16,6 +16,3 @@ type sysfs_usb_supply, sysfs_type, fs_type;
 type sysfs_tp_dispparam, sysfs_type, fs_type;
 type sysfs_tp_aodstatus, sysfs_type, fs_type;
 type sysfs_tp_fodstatus, sysfs_type, fs_type;
-
-# system
-type system_configs_file, system_file_type, file_type;
