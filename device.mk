@@ -33,31 +33,15 @@ AB_OTA_PARTITIONS += \
     dtbo \
     system \
     vbmeta
-	
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
-	
-#A/B related packages
-PRODUCT_PACKAGES += \
-    update_engine_client
 
-#Boot control HAL test app
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl \
-    update_engine_client
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.trinket \
-    libcutils \
-    libgptutils \
-    libz
-	
-# Bluetooth
 PRODUCT_PACKAGES += \
-    BluetoothResCommon
+    otapreopt_script
 	
 # Board
 PRODUCT_USES_QCOM_HARDWARE := true
@@ -102,7 +86,16 @@ PRODUCT_COPY_FILES += \
 
 # ANT+
 PRODUCT_PACKAGES += \
-    AntHalService \
+    AntHalService
+	
+# Boot control
+PRODUCT_PACKAGES_DEBUG += \
+    android.hardware.boot@1.0-impl.recovery \
+    bootctl
+	
+# Bluetooth
+PRODUCT_PACKAGES += \
+    BluetoothResCommon
 	
 # Device-specific settings
 PRODUCT_PACKAGES += \
@@ -188,4 +181,14 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
+	
+# Update engine
+PRODUCT_PACKAGES += \
+    bootctrl.trinket.recovery \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
+PRODUCT_PACKAGES_DEBUG += \
+    update_engine_client
 
