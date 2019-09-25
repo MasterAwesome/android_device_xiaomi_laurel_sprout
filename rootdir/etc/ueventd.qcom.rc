@@ -1,0 +1,2 @@
+# Add device block for FRP
+/dev/block/platform/soc/4804000.ufshc/by-name/frp    0600   system     system
