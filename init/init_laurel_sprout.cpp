@@ -60,4 +60,8 @@ void vendor_load_properties()
     property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
     property_override_dual("ro.control_privapp_permissions", "ro.control_privapp_permissions", "log");
     property_override("ro.oem_unlock_supported", "0");
+
+    property_override("ro.bluetooth.a2dp_offload.supported", "false");
+    property_override("persist.bluetooth.a2dp_offload.disabled", "true");
+    property_override("persist.bluetooth.bluetooth_audio_hal.disabled", "true");
 }
