@@ -156,6 +156,11 @@ lib/libwfduibcsrc.so
 lib/libwfduibcsrcinterface.so
 -priv-app/WfdService/WfdService.apk
 
+#QTI AV Enhancements
+lib/libavenhancements.so
+lib/libqct_resampler.so
+lib64/libavenhancements.so
+
 # Xiaomi
 lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
