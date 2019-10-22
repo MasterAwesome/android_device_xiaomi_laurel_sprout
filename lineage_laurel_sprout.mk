@@ -1,4 +1,4 @@
-# Copyright (C) 2019 The PixelExperience Project
+# Copyright (C) 2019 LineageOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,21 +18,19 @@ $(call inherit-product, device/xiaomi/laurel_sprout/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit some common BeastROMs stuff.
-$(call inherit-product, vendor/beast/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 
 PRODUCT_SHIPPING_API_LEVEL := 28
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := beast_laurel_sprout
+PRODUCT_NAME := lineage_laurel_sprout
 PRODUCT_DEVICE := laurel_sprout
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI A3
 PRODUCT_MANUFACTURER := Xiaomi
-
-BEAST_BUILD_TYPE := OFFICIAL
 
 BUILD_FINGERPRINT := "Xiaomi/laurel_sprout_eea/laurel_sprout:9/PKQ1.190416.001/V10.3.7.0.PFQEUXM:user/release-keys"
 

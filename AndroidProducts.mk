@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 BeastROMs
+# Copyright (C) 2019 LineageOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/beast_laurel_sprout.mk
-	
+    $(LOCAL_DIR)/lineage_laurel_sprout.mk
+
 COMMON_LUNCH_CHOICES := \
-    beast_laurel_sprout-userdebug
+    lineage_laurel_sprout-userdebug \
+    lineage_laurel_sprout-eng
+
