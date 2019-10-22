@@ -145,6 +145,9 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 # SELinux
 PRIVATE_EXCLUDE_BUILD_TEST := true
 
+# Temporary Sepolicy
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/temp
+
 # Sepolicy
 #BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
