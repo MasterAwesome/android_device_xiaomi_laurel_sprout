@@ -26,6 +26,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.use_data_netmgrd=true \
 	persist.vendor.data.mode=concurrent
 
+# Disable priv-app permissions whitelist
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=log
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
 	debug.sf.enable_hwc_vds=1
