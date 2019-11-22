@@ -98,6 +98,10 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     BluetoothResCommon
 
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
