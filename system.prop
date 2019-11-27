@@ -94,3 +94,9 @@ debug.sf.early_phase_offset_ns=1500000
 debug.sf.early_app_phase_offset_ns=1500000
 debug.sf.early_gl_phase_offset_ns=3000000
 debug.sf.early_gl_app_phase_offset_ns=15000000
+
+# IOP and Workload Classifier props
+vendor.iop.enable_uxe=1
+vendor.perf.iop_v3.enable=true
+vendor.perf.gestureflingboost.enable=true
+vendor.perf.workloadclassifier.enable=true
