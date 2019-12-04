@@ -74,17 +74,36 @@ product/lib64/vendor.qti.hardware.radio.ims@1.4.so
 -product/priv-app/ims/ims.apk
 
 # Perf
+-app/workloadclassifier/workloadclassifier.apk
 -framework/QPerformance.jar
 -framework/UxPerformance.jar
+bin/perfservice
+etc/init/perfservice.rc
+etc/perf/wlc_model.tflite
+etc/permissions/com.qualcomm.qti.Performance.xml
+etc/permissions/com.qualcomm.qti.UxPerformance.xml
+lib/extractors/libmmparserextractor.so
+lib/libavenhancements.so
+lib/libdolphin.so
+lib/libqct_resampler.so
+lib/libqti-at.so
+lib/libqti-iopd-client_system.so
+lib/libqti-perfd-client_system.so
+lib/libqti-util_system.so
+lib/libqti_performance.so
+lib64/extractors/libmmparserextractor.so
+lib64/libavenhancements.so
+lib64/libdolphin.so
 lib64/libqti-at.so
 lib64/libqti-iopd-client_system.so
 lib64/libqti-perfd-client_system.so
 lib64/libqti-util_system.so
 lib64/libqti_performance.so
 lib64/libqti_workloadclassifiermodel.so
-product/lib64/vendor.qti.hardware.iop@1.0.so
+product/lib/vendor.qti.hardware.iop@2.0.so
+product/lib/vendor.qti.hardware.perf@2.0.so
 product/lib64/vendor.qti.hardware.iop@2.0.so
-product/lib64/vendor.qti.hardware.perf@1.0.so
+product/lib64/vendor.qti.hardware.perf@2.0.so
 
 # QMI
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
