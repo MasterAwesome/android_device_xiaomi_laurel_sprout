@@ -59,4 +59,10 @@ on property:sys.boot_completed=1
 
 service vendor.power-hal-1-0 /system/bin/true
     disabled
+
+service iop-hal-2-0 /system/bin/true
+    disabled
+
+service perf-hal-2-0 /system/bin/true
+    disabled
 	
