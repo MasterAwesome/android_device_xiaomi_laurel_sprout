@@ -141,6 +141,8 @@ lib/libwfduibcsink.so
 lib/libwfduibcsinkinterface.so
 lib/libwfduibcsrc.so
 lib/libwfduibcsrcinterface.so
+lib/libdisplayconfig.so
+lib/libqdMetaData.system.so
 -priv-app/WfdService/WfdService.apk
 
 # Xiaomi
