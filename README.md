@@ -1,5 +1,3 @@
-Copyright (C) 2019 - BeastRoms-Devices
-
 Device configuration for Xiaomi Mi A3
 =========================================
 
