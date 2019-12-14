@@ -18,6 +18,9 @@
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
 
+# Dalvik heap configuration for a 4GB phone
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # VNDK
