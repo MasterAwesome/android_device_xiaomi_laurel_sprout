@@ -66,7 +66,7 @@ TARGET_KERNEL_CONFIG := vendor/laurel_sprout-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/laurel_sprout
 
 # Platform
-PRODUCT_BOARD_PLATFORM := trinket
+TARGET_BOARD_PLATFORM := trinket
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno610
 
 # Audio
