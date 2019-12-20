@@ -26,7 +26,7 @@ $(call inherit-product-if-exists, packages/apps/gcam/gcam.mk)
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # VNDK
-PRODUCT_TARGET_VNDK_VERSION := 28
+PRODUCT_TARGET_VNDK_VERSION := 29
 
 # Permissions
 PRODUCT_COPY_FILES += \
