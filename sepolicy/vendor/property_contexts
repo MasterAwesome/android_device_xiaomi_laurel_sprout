@@ -1,0 +1,11 @@
+persist.audio.dirac        u:object_r:dirac_prop:s0
+persist.net.doxlat         u:object_r:vendor_xlat_prop:s0
+persist.camera.            u:object_r:camera_prop:s0
+sys.listeners.registered   u:object_r:vendor_tee_listener_prop:s0
+sys.post_boot.parsed       u:object_r:vendor_mpctl_prop:s0
+
+#Power HAL
+vendor.powerhal.state                            u:object_r:power_prop:s0
+vendor.powerhal.audio                            u:object_r:power_prop:s0
+vendor.powerhal.init                             u:object_r:power_prop:s0
+vendor.powerhal.rendering                        u:object_r:power_prop:s0

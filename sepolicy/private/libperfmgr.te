@@ -1,0 +1,45 @@
+type libperfmgr, domain;
+type libperfmgr_exec, exec_type, file_type;
+
+init_daemon_domain(libperfmgr)
+
+allow libperfmgr debugfs_wlan:dir r_dir_perms;
+allow libperfmgr debugfs_wlan:file r_file_perms;
+
+allow libperfmgr system_file:file r_file_perms;
+
+allow libperfmgr sysfs_graphics:dir search;
+allow libperfmgr sysfs_graphics:file r_file_perms;
+
+#allow libperfmgr sysfs_rpm:file r_file_perms;
+allow libperfmgr sysfs_system_sleep_stats:file r_file_perms;
+
+# To do powerhint on nodes defined in powerhint.json
+allow libperfmgr sysfs_devfreq:dir search;
+allow libperfmgr sysfs_devfreq:{ file lnk_file } rw_file_perms;
+allow libperfmgr sysfs_scsi_devices:dir search;
+allow libperfmgr sysfs_scsi_devices:{ file lnk_file } rw_file_perms;
+allow libperfmgr sysfs_kgsl:dir search;
+allow libperfmgr sysfs_kgsl:{ file lnk_file } rw_file_perms;
+allow libperfmgr sysfs_msm_subsys:dir search;
+allow libperfmgr sysfs_msm_subsys:file rw_file_perms;
+allow libperfmgr sysfs_devices_system_cpu:file rw_file_perms;
+allow libperfmgr device_latency:chr_file rw_file_perms;
+allow libperfmgr proc_sysctl_schedboost:file rw_file_perms;
+allow libperfmgr debugfs_sched_features:dir search;
+allow libperfmgr debugfs_sched_features:file rw_file_perms;
+allow libperfmgr input_device:dir search;
+allow libperfmgr input_device:chr_file rw_file_perms;
+
+allow libperfmgr hal_power_hwservice:hwservice_manager add;
+allow libperfmgr hidl_base_hwservice:hwservice_manager add;
+binder_call(libperfmgr, hwservicemanager)
+
+# To get hwservicemanager state
+get_prop(libperfmgr, hwservicemanager_prop)
+
+# To get/set powerhal state property
+set_prop(libperfmgr, vendor_power_prop)
+
+# Rule for powerhal to write/dump cgroup
+allow libperfmgr cgroup:file rw_file_perms;
