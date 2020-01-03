@@ -176,6 +176,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Updater
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.3-service.laurel_sprout-libperfmgr
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/perf/powerhint.json:system/etc/powerhint.json
+
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     device/xiaomi/laurel_sprout
