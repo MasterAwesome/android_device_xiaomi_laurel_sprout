@@ -5,8 +5,10 @@ on init
     write /dev/stune/top-app/schedtune.boost 10
     write /dev/stune/top-app/schedtune.prefer_idle 1
 
-    mount none /dev/null /vendor/bin/hw/android.hardware.power@1.0-service
-    mount none /dev/null /vendor/etc/init/android.hardware.power@1.0-service.rc
+    # Mask up legacy PowerHAL
+    mount none /system/etc/fs_none /vendor/bin/hw/android.hardware.power@1.0-service bind
+    mount none /system/etc/fs_none /vendor/etc/init/android.hardware.power@1.0-service.rc bind
+    mount none /system/etc/fs_none /vendor/etc/powerhint.xml bind
 
 on boot
     chown system system /dev/input/event2
