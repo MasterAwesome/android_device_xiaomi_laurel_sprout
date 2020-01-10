@@ -36,6 +36,7 @@ allow libperfmgr latency_device:chr_file rw_file_perms;
 allow libperfmgr hal_power_hwservice:hwservice_manager add;
 allow libperfmgr hidl_base_hwservice:hwservice_manager add;
 binder_call(libperfmgr, hwservicemanager)
+binder_call(libperfmgr, hal_audio)
 
 # To get hwservicemanager state
 get_prop(libperfmgr, hwservicemanager_prop)
