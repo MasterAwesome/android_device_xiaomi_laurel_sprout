@@ -17,6 +17,7 @@
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
+$(call inherit-product, vendor/google/customization/config.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
