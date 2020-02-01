@@ -4,6 +4,7 @@ genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.q
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pmi632@2:qcom,qpnp-smb5/power_supply/usb u:object_r:sysfs_usb_supply:s0
 
 genfscon debugfs /wlan0                               u:object_r:debugfs_wlan:s0
+genfscon debugfs /sched_features                      u:object_r:debugfs_sched_features:s0
 
 genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/idle_state    u:object_r:sysfs_graphics:s0
 
