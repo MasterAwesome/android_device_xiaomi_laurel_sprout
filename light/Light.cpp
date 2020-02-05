@@ -119,13 +119,9 @@ static void handleNotification(const LightState& state) {
 
     switch (state.flashMode) {
         case Flash::HARDWARE:
-            /* Breathing */  
-            set(WHITE_LED BREATH, 1);
-            break;
         case Flash::TIMED:
-            /* Blinking */
-            set(WHITE_LED DELAY_OFF, state.flashOnMs);
-            set(WHITE_LED DELAY_ON, state.flashOffMs);
+            /* Breathing */
+            set(WHITE_LED BREATH, 1);
             break;
         case Flash::NONE:
         default:
