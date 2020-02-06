@@ -21,7 +21,6 @@ DEVICE_PATH := device/xiaomi/laurel_sprout
 
 # A/B
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-TARGET_USES_HARDWARE_QCOM_BOOTCTRL := true
 
 # Architecture
 TARGET_ARCH := arm64
