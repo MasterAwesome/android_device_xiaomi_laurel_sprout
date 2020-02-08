@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <bool name="profile_supported_avrcp_controller">true</bool>
-    <bool name="profile_supported_a2dp_sink">false</bool>
-    <bool name="profile_supported_sap">false</bool>
-    <bool name="profile_supported_ba">true</bool>
-    <bool name="profile_supported_hid_device">false</bool>
-</resources>
