@@ -16,7 +16,7 @@
 */
 -->
 <resources>
-    <dimen name="rounded_corner_radius">20.0dip</dimen>
+    <dimen name="rounded_corner_radius">40.0px</dimen>
     <dimen name="rounded_corner_radius_bottom">128.0px</dimen>
     <dimen name="rounded_corner_radius_top">144.0px</dimen>
 </resources>
