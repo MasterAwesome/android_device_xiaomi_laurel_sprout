@@ -164,8 +164,8 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # OTA
-#PRODUCT_PACKAGES += \
-    Updates
+PRODUCT_PACKAGES += \
+    Updater
 
 # Power
 PRODUCT_PACKAGES += \
