@@ -1,3 +1,6 @@
+on post-fs
+    mount none /system/overlay/BluetoothResCommon.apk /vendor/overlay/BluetoothResCommon.apk bind
+
 on boot
     chown system system /dev/input/event2
     chmod 0664 /dev/input/event2
