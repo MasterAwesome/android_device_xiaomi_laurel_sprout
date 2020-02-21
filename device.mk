@@ -97,6 +97,10 @@ PRODUCT_PACKAGES_DEBUG += \
     android.hardware.boot@1.0-impl.recovery \
     bootctl
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    BluetoothResCommon
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap
