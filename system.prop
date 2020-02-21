@@ -100,5 +100,3 @@ vendor.iop.enable_uxe=1
 vendor.perf.iop_v3.enable=true
 vendor.perf.gestureflingboost.enable=true
 vendor.perf.workloadclassifier.enable=true
-
-ro.boot.vendor.overlay.static=false
