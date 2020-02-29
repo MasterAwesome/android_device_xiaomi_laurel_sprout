@@ -156,7 +156,6 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
 # Treble
 BUILD_WITHOUT_VENDOR := true
 BOARD_VNDK_VERSION := current
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
