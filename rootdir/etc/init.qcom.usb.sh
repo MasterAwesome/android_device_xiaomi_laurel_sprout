@@ -74,27 +74,7 @@ if [ "$target" == "msm8937" ]; then
 		*)
 		;;
 	   esac
-	else
-	   case "$soc_id" in
-		"313" | "320")
-		   setprop vendor.usb.rndis.func.name "rndis_bam"
-		   setprop vendor.usb.rmnet.func.name "rmnet_bam"
-		   setprop vendor.usb.rmnet.inst.name "rmnet"
-		   setprop vendor.usb.dpl.inst.name "dpl"
-		;;
-		*)
-		;;
-	   esac
 	fi
-fi
-
-if [ "$target" == "msm8996" ]; then
-       if [ -d /config/usb_gadget ]; then
-                  setprop vendor.usb.rndis.func.name "rndis_bam"
-                  setprop vendor.usb.rmnet.func.name "rmnet_bam"
-                  setprop vendor.usb.rmnet.inst.name "rmnet"
-                  setprop vendor.usb.dpl.inst.name "dpl"
-       fi
 fi
 
 # check configfs is mounted or not
@@ -112,6 +92,7 @@ if [ -d /config/usb_gadget ]; then
 		serialno=1234567
 		echo $serialno > /config/usb_gadget/g1/strings/0x409/serialnumber
 	fi
+	setprop vendor.usb.configfs 1
 fi
 
 #
