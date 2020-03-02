@@ -2,6 +2,12 @@
 vendor/lib64/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib64/soundfx/libvolumelistener.so|2dffcd0bde20f5f1830918146c9f40c02bbbae9f
 vendor/lib/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib/soundfx/libvolumelistener.so|117f8b7d834b4587dc8c8c5d15fada85b877ed26
 
+# ANT+
+-lib/libantradio.so
+-lib64/libantradio.so
+product/lib/com.qualcomm.qti.ant@1.0.so
+product/lib64/com.qualcomm.qti.ant@1.0.so
+
 # CNE
 etc/cne/Nexus/ATT/ATT_profiles.xml
 etc/cne/Nexus/ROW/ROW_profiles.xml
