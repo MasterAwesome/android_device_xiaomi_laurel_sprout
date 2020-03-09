@@ -17,7 +17,6 @@
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
-$(call inherit-product, vendor/google/customization/config.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -25,7 +24,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Dalvik heap configuration for a 4GB phone
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
-$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
