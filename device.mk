@@ -24,7 +24,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Dalvik heap configuration for a 4GB phone
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
-
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # VNDK
