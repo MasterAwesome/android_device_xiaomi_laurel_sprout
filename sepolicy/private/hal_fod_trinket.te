@@ -4,6 +4,9 @@ hal_server_domain(hal_fod_trinket, hal_lineage_fod)
 type hal_fod_trinket_exec, system_file_type, exec_type, file_type;
 init_daemon_domain(hal_fod_trinket)
 
+# Xiaomi FOD
+type hal_fingerprint_hwservice_xiaomi, hwservice_manager_type;
+
 # Allow access to the HALs
 hal_client_domain(hal_fod_trinket, hal_fingerprint)
 
@@ -18,8 +21,10 @@ allow hal_fod_trinket hal_display_hwservice:hwservice_manager find;
 
 # Allow hal_fod_trinket to hal_fingerprint_hwservice
 allow hal_fod_trinket hal_fingerprint_hwservice:hwservice_manager find;
+allow hal_fod_trinket hal_fingerprint_hwservice_xiaomi:hwservice_manager find;
 
 allow hal_fod_trinket sysfs_graphics:file rw_file_perms;
 allow hal_fod_trinket sysfs_tp_dispparam:file rw_file_perms;
 allow hal_fod_trinket sysfs_tp_aodstatus:file rw_file_perms;
 allow hal_fod_trinket sysfs_tp_fodstatus:file rw_file_perms;
+
