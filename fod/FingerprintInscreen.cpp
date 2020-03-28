@@ -29,8 +29,8 @@
 #define PARAM_NIT_NONE 0
 
 #define DISPPARAM_PATH "/sys/class/drm/card0-DSI-1/disp_param"
-#define DISPPARAM_FOD_BACKLIGHT_HBM "0x1d007ff"
-#define DISPPARAM_FOD_BACKLIGHT_RESET "0x20f0000"
+#define DISPPARAM_FOD_BACKLIGHT_HBM "0x1D20000"
+#define DISPPARAM_FOD_BACKLIGHT_RESET "0x20F0000"
 
 #define FOD_STATUS_PATH "/sys/class/touch/tp_dev/fod_status"
 #define FOD_STATUS_ON 1
