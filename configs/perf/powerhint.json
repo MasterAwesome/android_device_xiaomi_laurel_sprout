@@ -161,17 +161,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "CDSchedtuneBoost",
-      "Path": "/dev/stune/camera-daemon/schedtune.boost",
-      "Values": [
-        "10",
-        "1",
-        "0"
-      ],
-      "DefaultIndex": 2,
-      "ResetOnInit": true
-    },
-    {
       "Name": "CPUBWHystTriggerCount",
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_trigger_count",
       "Values": [
@@ -589,12 +578,6 @@
       "Value": "80"
     },
     {
-      "PowerHint": "CAMERA_STREAMING",
-      "Node": "CDSchedtuneBoost",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_60FPS",
       "Node": "PowerHALMainState",
       "Duration": 0,
@@ -605,12 +588,6 @@
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
       "Value": "2016000"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_60FPS",
-      "Node": "CDSchedtuneBoost",
-      "Duration": 0,
-      "Value": "1"
     },
     {
       "PowerHint": "CAMERA_STREAMING_60FPS",
