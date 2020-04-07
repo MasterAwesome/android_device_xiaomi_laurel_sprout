@@ -562,10 +562,6 @@
          Used to decide if the user can change the colors -->
     <bool name="config_multiColorBatteryLed">false</bool>
 
-    <!-- Whether to use base rounded corner radius for window animations instead
-          of min between top and bottom radius-->
-    <bool name="config_useDefaultRoundedCornerRadius">true</bool>
-
     <!-- The list of vendor package signatures that should also be considered
     platform signatures, specifically for use on devices with a vendor partition. -->
     <string-array name="config_vendorPlatformSignatures">
