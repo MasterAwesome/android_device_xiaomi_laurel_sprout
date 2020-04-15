@@ -40,10 +40,8 @@ public final class DozeUtils {
 
     protected static final String ALWAYS_ON_DISPLAY = "always_on_display";
 
-    protected static final String CATEG_PICKUP_SENSOR = "pickup_sensor";
     protected static final String CATEG_PROX_SENSOR = "proximity_sensor";
 
-    protected static final String GESTURE_PICK_UP_KEY = "gesture_pick_up";
     protected static final String GESTURE_HAND_WAVE_KEY = "gesture_hand_wave";
     protected static final String GESTURE_POCKET_KEY = "gesture_pocket";
 
@@ -117,9 +115,6 @@ public final class DozeUtils {
                 .getBoolean(gesture, false);
     }
 
-    protected static boolean isPickUpEnabled(Context context) {
-        return isGestureEnabled(context, GESTURE_PICK_UP_KEY);
-    }
 
     protected static boolean isHandwaveGestureEnabled(Context context) {
         return isGestureEnabled(context, GESTURE_HAND_WAVE_KEY);
@@ -130,7 +125,7 @@ public final class DozeUtils {
     }
 
     public static boolean sensorsEnabled(Context context) {
-        return isPickUpEnabled(context) || isHandwaveGestureEnabled(context)
+        return isHandwaveGestureEnabled(context)
                 || isPocketGestureEnabled(context);
     }
 
