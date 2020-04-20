@@ -41,17 +41,7 @@
 #define FOD_SENSOR_Y 1356
 #define FOD_SENSOR_SIZE 134
 
-#define BRIGHTNESS_PATH "/sys/class/backlight/panel0-backlight/brightness"
-
 namespace {
-
-template <typename T>
-static T get(const std::string& path, const T& def) {
-    std::ifstream file(path);
-    T result;
-    file >> result;
-    return file.fail() ? def : result;
-}
 
 template <typename T>
 static void set(const std::string& path, const T& value) {
@@ -131,8 +121,8 @@ Return<void> FingerprintInscreen::setLongPressEnabled(bool) {
     return Void();
 }
 
-Return<int32_t> FingerprintInscreen::getDimAmount(int32_t /* brightness */) {
-    int realBrightness = get(BRIGHTNESS_PATH, 0);
+Return<int32_t> FingerprintInscreen::getDimAmount(int32_t brightness) {
+    int realBrightness = brightness * 2047 / 255;
     float alpha;
 
     if (realBrightness > 500) {
