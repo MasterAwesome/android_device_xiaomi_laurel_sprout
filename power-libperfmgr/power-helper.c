@@ -44,7 +44,7 @@
 #include "power-helper.h"
 
 #ifndef MASTER_STATS_FILE
-#define MASTER_STATS_FILE "/sys/power/rpmh_stats/master_stats"
+#define MASTER_STATS_FILE "/sys/kernel/debug/rpm_master_stats"
 #endif
 
 #ifndef SYSTEM_STATS_FILE
@@ -58,16 +58,15 @@
 #define LINE_SIZE 128
 
 const char *master_stats_labels[MASTER_STATS_COUNT] = {
-    "Sleep Accumulated Duration",
-    "Sleep Count",
-    "Sleep Last Entered At",
+    "xo_accumulated_duration",
+    "xo_count",
+    "xo_last_entered_at",
 };
 
 struct stats_section master_sections[MASTER_COUNT] = {
     { MASTER_APSS,       "APSS", master_stats_labels, ARRAY_SIZE(master_stats_labels) },
     { MASTER_MPSS,       "MPSS", master_stats_labels, ARRAY_SIZE(master_stats_labels) },
     { MASTER_ADSP,       "ADSP", master_stats_labels, ARRAY_SIZE(master_stats_labels) },
-    { MASTER_SLPI,       "SLPI", master_stats_labels, ARRAY_SIZE(master_stats_labels) },
     { MASTER_CDSP,       "CDSP", master_stats_labels, ARRAY_SIZE(master_stats_labels) },
     // The following masters are currently unused
     //{ MASTER_GPU,         "GPU", master_stats_labels, ARRAY_SIZE(master_stats_labels) },
