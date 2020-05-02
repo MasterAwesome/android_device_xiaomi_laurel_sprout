@@ -90,8 +90,8 @@ const char *system_stats_labels[SYSTEM_STATE_STATS_COUNT] = {
 };
 
 struct stats_section system_sections[] = {
-    { SYSTEM_STATES, "RPM Mode:aosd", system_stats_labels, ARRAY_SIZE(system_stats_labels) },
-    { SYSTEM_STATES, "RPM Mode:cxsd", system_stats_labels, ARRAY_SIZE(system_stats_labels) },
+    { SYSTEM_STATES, "RPM Mode:vlow", system_stats_labels, ARRAY_SIZE(system_stats_labels) },
+    { SYSTEM_STATES, "RPM Mode:vmin", system_stats_labels, ARRAY_SIZE(system_stats_labels) },
 };
 
 static int parse_stats(const char **stat_labels, size_t num_stats,
