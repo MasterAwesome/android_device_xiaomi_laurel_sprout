@@ -1,4 +1,4 @@
-type libperfmgr, domain, libperfmgr_exception;
+type libperfmgr, domain;
 type libperfmgr_exec, exec_type, file_type;
 
 init_daemon_domain(libperfmgr)
