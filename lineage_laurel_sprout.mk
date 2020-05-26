@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common Syberia stuff
+# Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 720
