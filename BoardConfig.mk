@@ -47,6 +47,8 @@ TARGET_NO_BOOTLOADER := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_PHONY_TARGETS := true
 
+
+
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 1
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
@@ -93,6 +95,9 @@ ifeq ($(HOST_OS),linux)
     WITH_DEXPREOPT ?= true
   endif
 endif
+
+# Display	
+TARGET_SCREEN_DENSITY := 320
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
