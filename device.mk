@@ -40,7 +40,26 @@ AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     system \
-    vbmeta
+    vbmeta \
+    vendor \
+    dtbo \
+    modem \
+    abl \
+    bluetooth \
+    cmnlib \
+    cmnlib64 \
+    devcfg \
+    dsp \
+    hyp \
+    imagefv \
+    keymaster \
+    qupfw \
+    rpm \
+    storsec \
+    tz \
+    uefisecapp \
+    xbl \
+    xbl_config
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \

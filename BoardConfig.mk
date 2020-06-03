@@ -66,7 +66,7 @@ TARGET_KERNEL_CONFIG := vendor/laurel_sprout-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/laurel_sprout
 TARGET_KERNEL_NO_LLVM_BINUTILS := true
 
-#BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/dtbo.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/dtbo.img
 
 # Platform
 TARGET_BOARD_PLATFORM := trinket
@@ -188,4 +188,4 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_laurel_sprout
 -include vendor/xiaomi/laurel_sprout/BoardConfigVendor.mk
 
 # Include prebuilt vendor
-#include device/xiaomi/laurel_sprout-images/vendor-image.mk
+include device/xiaomi/laurel_sprout-images/vendor-image.mk
