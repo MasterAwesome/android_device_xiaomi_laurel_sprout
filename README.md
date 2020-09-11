@@ -18,3 +18,21 @@ Front Camera | 32MP
 
 ## Device picture
 ![Xiaomi Mi A3](https://i01.appmifile.com/webfile/globalimg/products/pc/mi-a3/MIA3_02.jpg "Xiaomi Mi A3")
+
+## Device manifest
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+	<!-- DEVICE TREE -->
+	<project name="MasterAwesome/android_device_xiaomi_laurel_sprout" path="device/xiaomi/laurel_sprout" remote="github" revision="master" />
+
+	<!-- VENDOR TREE -->
+	<project name="MasterAwesome/android_vendor_xiaomi_laurel_sprout" path="vendor/xiaomi/laurel_sprout" remote="github" revision="lineage-17.1" />
+	<project name="MasterAwesome/android_vendor_xiaomi_laurel_sprout-images" path="vendor/xiaomi/laurel_sprout-images" remote="github" revision="master" />
+
+	<!-- KERNEL TREE -->
+	<project name="MasterAwesome/android_kernel_xiaomi_laurel_sprout" path="kernel/xiaomi/laurel_sprout" remote="github" revision="master" />
+</manifest>
+```
