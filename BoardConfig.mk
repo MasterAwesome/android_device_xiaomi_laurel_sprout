@@ -187,5 +187,8 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_laurel_sprout
 # Inherit from the proprietary version
 -include vendor/xiaomi/laurel_sprout/BoardConfigVendor.mk
 
+# Unpack vendor images
+include vendor/xiaomi/laurel_sprout-images/unpack-images.mk
+
 # Include prebuilt vendor
 include device/xiaomi/laurel_sprout-images/vendor-image.mk
