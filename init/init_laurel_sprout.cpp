@@ -57,4 +57,5 @@ void vendor_load_properties()
     property_override("persist.bluetooth.bluetooth_audio_hal.disabled", "true");
     property_override("persist.vendor.qcom.bluetooth.enable.splita2dp", "false");
     property_override("vendor.audio.feature.a2dp_offload.enable", "false");
+    property_override("ro.product.model", "MA-A3");  // Get it? MA? MasterAwesome?? Also passes safetynet.
 }
