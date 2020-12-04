@@ -17,8 +17,10 @@ cc_library_static {
     name: "libinit_laurel_sprout",
     recovery_available: true,
     srcs: ["init_laurel_sprout.cpp"],
+    whole_static_libs: ["libbase"],
     include_dirs: [
         "system/core/base/include",
         "system/core/init"
     ]
 }
+
