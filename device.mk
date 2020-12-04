@@ -75,14 +75,14 @@ TARGET_SCREEN_HEIGHT := 1560
 TARGET_SCREEN_WIDTH := 720
 
 # Some GSI builds enable dexpreopt, whitelist these preopt files
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_WHITELIST += %.odex %.vdex %.art
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += %.odex %.vdex %.art
 
 # Exclude GSI specific files
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_WHITELIST += \
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/etc/init/config/skip_mount.cfg
 
 # Exclude all files under system/product and system/product_services
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_WHITELIST += \
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/product/% \
     system/product_services/%
 
