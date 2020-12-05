@@ -191,5 +191,5 @@ include vendor/xiaomi/laurel_sprout-images/unpack-images.mk
 # Include prebuilt vendor
 include vendor/xiaomi/laurel_sprout-images/vendor-image.mk
 
-# Include sepol patcher
-include $(DEVICE_PATH)/sepol_patcher.mk
+# Include sepol patchers
+include device/xiaomi/laurel_sprout/sys_sepol_upd/sepol_patcher.mk

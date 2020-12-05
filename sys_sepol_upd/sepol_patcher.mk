@@ -11,9 +11,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+include $(CLEAR_VARS)
 
-SEPOL_PATH := "system/sepolicy"
-DEVICE_PATH := "device/xiaomi/laurel_sprout"
-PATCH_FILE := "0001-Revert-sepolicy-Address-denials-for-legacy-last_kmsg.patch"
+DEVICE_PATH := device/xiaomi/laurel_sprout
+SCRIPT_PATH := $(DEVICE_PATH)/sys_sepol_upd/patch.sh
 
-SHELL_RESULT := $(shell cp $(DEVICE_PATH)/$(PATCH_FILE) $(SEPOL_PATH) && cd $(SEPOL_PATH) && git am $(PATCH_FILE) && rm $(PATCH_FILE) && cd -)
+SHELL_RESULT := $(shell $(SCRIPT_PATH))
+
+ifneq ($(SHELL_RESULT), $(PWD))
+$(warning $(SHELL_RESULT))
+endif
