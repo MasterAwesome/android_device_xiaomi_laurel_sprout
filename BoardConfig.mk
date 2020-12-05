@@ -27,7 +27,7 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := kryo
+TARGET_CPU_VARIANT := kryo300
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
@@ -46,8 +46,6 @@ TARGET_NO_BOOTLOADER := true
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_PHONY_TARGETS := true
-
-
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 1
@@ -192,3 +190,6 @@ include vendor/xiaomi/laurel_sprout-images/unpack-images.mk
 
 # Include prebuilt vendor
 include vendor/xiaomi/laurel_sprout-images/vendor-image.mk
+
+# Include sepol patcher
+include $(DEVICE_PATH)/sepol_patcher.mk
