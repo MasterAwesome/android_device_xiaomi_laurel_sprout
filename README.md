@@ -26,13 +26,13 @@ Front Camera | 32MP
 
 <manifest>
 	<!-- DEVICE TREE -->
-	<project name="MasterAwesome/android_device_xiaomi_laurel_sprout" path="device/xiaomi/laurel_sprout" remote="github" revision="master" />
+	<project name="MasterAwesome/android_device_xiaomi_laurel_sprout" path="device/xiaomi/laurel_sprout" remote="github"/>
 
 	<!-- VENDOR TREE -->
-	<project name="MasterAwesome/android_vendor_xiaomi_laurel_sprout" path="vendor/xiaomi/laurel_sprout" remote="github" revision="lineage-17.1" />
-	<project name="MasterAwesome/android_vendor_xiaomi_laurel_sprout-images" path="vendor/xiaomi/laurel_sprout-images" remote="github" revision="master" />
+	<project name="MasterAwesome/android_vendor_xiaomi_laurel_sprout" path="vendor/xiaomi/laurel_sprout" remote="github"/>
+	<project name="MasterAwesome/android_vendor_xiaomi_laurel_sprout-images" path="vendor/xiaomi/laurel_sprout-images" remote="github" />
 
 	<!-- KERNEL TREE -->
-	<project name="MasterAwesome/android_kernel_xiaomi_laurel_sprout" path="kernel/xiaomi/laurel_sprout" remote="github" revision="master" />
+	<project name="MasterAwesome/android_kernel_xiaomi_laurel_sprout" path="kernel/xiaomi/laurel_sprout" remote="github" />
 </manifest>
 ```
