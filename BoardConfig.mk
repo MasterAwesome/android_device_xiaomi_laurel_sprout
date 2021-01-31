@@ -166,15 +166,25 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Sepolicy
-include device/qcom/sepolicy/SEPolicy.mk
-
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+    device/qcom/sepolicy/generic/private \
+    device/qcom/sepolicy/qva/private \
+
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
+    device/qcom/sepolicy/generic/public \
+    device/qcom/sepolicy/generic/public/attribute \
+    device/qcom/sepolicy/qva/public \
+    device/qcom/sepolicy/qva/public/attribute
 
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Treble
 BUILD_WITHOUT_VENDOR := true
 BOARD_VNDK_VERSION := current
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+PRODUCT_SEPOLICY_SPLIT_OVERRIDE := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

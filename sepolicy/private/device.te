@@ -1,2 +1,0 @@
-type device_latency, dev_type;
-type latency_device, dev_type;

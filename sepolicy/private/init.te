@@ -1,18 +1,3 @@
-# Allow init to chown/chmod on pseudo files in /sys
-allow init {
-    sysfs_graphics
-}:file { open read setattr };
-
-# Allow init to mount vendor configs
-allow init vendor_configs_file:dir mounton;
-
-# Allow init to mount wlan kernel module
-allow init { system_file vendor_file }:file mounton;
-
-# Allow init to mount offmode charging daemon
-allow init rootfs:file mounton;
-
-# Allow init to mount overlay files
-allow init vendor_overlay_file:file mounton;
-
-#permissive init;
+allow init hal_fingerprint_hwservice_xiaomi:hwservice_manager find;
+allow init hal_lineage_fod_hwservice:hwservice_manager { add find };
+allow init hidl_base_hwservice:hwservice_manager add;

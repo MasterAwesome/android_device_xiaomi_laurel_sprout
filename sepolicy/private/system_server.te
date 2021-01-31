@@ -1,5 +1,0 @@
-allow system_server libperfmgr:binder call;
-get_prop(system_server, vendor_camera_prop)
-allow system_server vendor_default_prop:file { getattr open read };
-allow system_server sysfs_battery_supply:file { getattr open read write };
-allow system_server sysfs_usb_supply:file { getattr open read write };
