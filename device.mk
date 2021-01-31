@@ -79,16 +79,17 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += %.odex %.vdex %.art
 
 # Exclude GSI specific files
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    system/etc/init/config/skip_mount.cfg
+    system/system_ext/etc/init/config/skip_mount.cfg
 
 # Exclude all files under system/product and system/product_services
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/product/% \
-    system/product_services/%
+    system/product_services/% \
+    system/system_ext/%
 
 # GSI specific tasks on boot
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/skip_mount.cfg:system/etc/init/config/skip_mount.cfg
+    $(LOCAL_PATH)/configs/skip_mount.cfg:system/system_ext/etc/init/config/skip_mount.cfg
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
