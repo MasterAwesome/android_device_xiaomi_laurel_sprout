@@ -173,8 +173,6 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
     device/qcom/sepolicy/qva/public \
     device/qcom/sepolicy/qva/public/attribute
 
-SELINUX_IGNORE_NEVERALLOWS := true
-
 # Treble
 BUILD_WITHOUT_VENDOR := true
 BOARD_VNDK_VERSION := current

@@ -1,3 +1,2 @@
 allow init hal_fingerprint_hwservice_xiaomi:hwservice_manager find;
-allow init hal_lineage_fod_hwservice:hwservice_manager { add find };
 allow init hidl_base_hwservice:hwservice_manager add;
