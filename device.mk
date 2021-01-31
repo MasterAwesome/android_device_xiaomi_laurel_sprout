@@ -34,32 +34,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     $(LOCAL_PATH)/permissions/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 
-# A/B
-AB_OTA_UPDATER := true
-
-AB_OTA_PARTITIONS += \
-    boot \
-    system \
-    vbmeta \
-    vendor \
-    dtbo \
-    modem \
-    abl \
-    bluetooth \
-    cmnlib \
-    cmnlib64 \
-    devcfg \
-    dsp \
-    hyp \
-    imagefv \
-    keymaster \
-    qupfw \
-    rpm \
-    storsec \
-    tz \
-    uefisecapp \
-    xbl \
-    xbl_config
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \

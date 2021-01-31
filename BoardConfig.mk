@@ -20,6 +20,14 @@ BOARD_VENDOR := xiaomi
 DEVICE_PATH := device/xiaomi/laurel_sprout
 
 # A/B
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS := \
+    boot \
+    dtbo \
+    system \
+    vbmeta \
+    vendor
+
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Architecture
