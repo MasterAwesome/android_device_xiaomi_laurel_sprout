@@ -211,3 +211,4 @@ persist.rcs.supported = 1
 
 #Property to set native recorder's maximum base layer fps
 ro.media.recorder-max-base-layer-fps = 60
+
