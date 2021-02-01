@@ -36,3 +36,6 @@ Front Camera | 32MP
 	<project name="MasterAwesome/android_kernel_xiaomi_laurel_sprout" path="kernel/xiaomi/laurel_sprout" remote="github" />
 </manifest>
 ```
+
+## Builds
+Builds for this tree is at: https://gitlab.com/MasterAwesome/laurel_sprout-builds. Please refer to commit-id to know the latest commit
