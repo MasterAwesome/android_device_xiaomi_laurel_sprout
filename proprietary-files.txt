@@ -6,6 +6,10 @@ product/vendor_overlay/30/lib64/soundfx/libvolumelistener.so|2dffcd0bde20f5f1830
 product/vendor_overlay/30/lib/libqdMetaData.so|448d9b8f26f154995de539225027b91db70fd35a
 product/vendor_overlay/30/lib64/libqdMetaData.so|6647bd5beb76df36f1e98cb1fdcc262e8efac21a
 
+# Bluetooth (aptX) - from coral - QQ2A.200305.003
+system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+
 # ANT+
 system_ext/lib/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
