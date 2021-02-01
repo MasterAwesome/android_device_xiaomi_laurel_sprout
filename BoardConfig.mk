@@ -21,12 +21,30 @@ DEVICE_PATH := device/xiaomi/laurel_sprout
 
 # A/B
 AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS := \
+
+AB_OTA_PARTITIONS += \
     boot \
-    dtbo \
     system \
     vbmeta \
-    vendor
+    vendor \
+    dtbo \
+    modem \
+    abl \
+    bluetooth \
+    cmnlib \
+    cmnlib64 \
+    devcfg \
+    dsp \
+    hyp \
+    imagefv \
+    keymaster \
+    qupfw \
+    rpm \
+    storsec \
+    tz \
+    uefisecapp \
+    xbl \
+    xbl_config
 
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
