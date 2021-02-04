@@ -136,11 +136,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.qcom.rc \
-    fs_none \
-    init.recovery.qcom.rc \
-    ueventd.qcom.rc \
-    init.qcom.usb.sh
+    init.recovery.qcom.rc
 
 # IMS
 PRODUCT_PACKAGES += \
