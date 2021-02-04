@@ -1,5 +1,3 @@
-dontaudit hal_fingerprint storage_file:dir search;
-
 type hal_fod_trinket, coredomain, domain;
 hal_server_domain(hal_fod_trinket, hal_lineage_fod)
 
@@ -25,7 +23,7 @@ allow hal_fod_trinket hal_display_hwservice:hwservice_manager find;
 allow hal_fod_trinket hal_fingerprint_hwservice:hwservice_manager find;
 allow hal_fod_trinket hal_fingerprint_hwservice_xiaomi:hwservice_manager find;
 
-allow hal_fod_trinket sysfs_graphics:file rw_file_perms;
+allow hal_fod_trinket vendor_sysfs_graphics:file rw_file_perms;
 allow hal_fod_trinket sysfs_tp_dispparam:file rw_file_perms;
 allow hal_fod_trinket sysfs_tp_aodstatus:file rw_file_perms;
 allow hal_fod_trinket sysfs_tp_fodstatus:file rw_file_perms;

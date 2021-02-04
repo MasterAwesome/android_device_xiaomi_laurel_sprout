@@ -4,3 +4,9 @@ allow init hidl_base_hwservice:hwservice_manager add;
 # Allow init to mount our vendor_overlays
 allow init vendor_configs_file:dir mounton;
 allow init same_process_hal_file:dir mounton;
+
+# Allow init to chown/chmod on pseudo files in /sys
+allow init {
+    sysfs_graphics
+    vendor_sysfs_graphics
+}:file { open read setattr };
