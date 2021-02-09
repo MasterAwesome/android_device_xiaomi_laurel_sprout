@@ -52,19 +52,10 @@ TARGET_SCREEN_WIDTH := 720
 # Some GSI builds enable dexpreopt, whitelist these preopt files
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += %.odex %.vdex %.art
 
-# Exclude GSI specific files
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    system/system_ext/etc/init/config/skip_mount.cfg
-
 # Exclude all files under system/product and system/product_services
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/product/% \
-    system/product_services/% \
-    system/system_ext/%
-
-# GSI specific tasks on boot
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/skip_mount.cfg:system/system_ext/etc/init/config/skip_mount.cfg
+    system/product_services/%
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -73,9 +64,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
-
-# Properties
--include $(LOCAL_PATH)/system_prop.mk
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
