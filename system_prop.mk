@@ -147,3 +147,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.df.effect.conflict=1 \
     ro.vendor.qti.va_aosp.support=1 \
     sys.qca1530=detect
+
+# Lineage updater prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    lineage.updater.uri=https://gitlab.com/MasterAwesome/laurel_sprout-builds/-/raw/master/response.json
