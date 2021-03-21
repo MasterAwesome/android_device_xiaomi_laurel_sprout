@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
-    <item name="ambient.on">113.39</item>
-    <item name="audio">15</item>
-    <item name="video">16</item>
-    <item name="cpu.idle">4.57</item>
-    <item name="battery.capacity">4030</item>
-    <item name="modem.controller.sleep">0</item>
-    <array name="gps.signalqualitybased">
-        <value>0</value>
-        <value>0</value>
-    </array>
-    <item name="gps.voltage">0</item>
     <item name="none">0</item>
     <item name="screen.on">43</item>
     <item name="screen.full">363</item>
+    <item name="cpu.active">18.3</item>
+    <item name="cpu.idle">2.9</item>
+    <item name="cpu.suspend">0</item>
+    <item name="battery.capacity">4030</item>
+    <item name="wifi.on">0.1</item>
+    <item name="wifi.active">109</item>
+    <item name="wifi.scan">1.2</item>
+    <item name="dsp.audio">21</item>
+    <item name="dsp.video">71</item>
+    <item name="camera.flashlight">524</item>
+    <item name="camera.avg">395</item>
+    <item name="gps.on">6.8</item>
+    <item name="radio.active">152</item>
+    <item name="radio.scanning">4.4</item>
+    <item name="modem.controller.idle">4.4</item>
+    <item name="modem.controller.rx">135</item>
+    <item name="modem.controller.tx">126</item>
+    <item name="modem.controller.voltage">3700</item>
+    <item name="wifi.controller.idle">1.22</item>
+    <item name="wifi.controller.rx">225</item>
+    <item name="wifi.controller.tx">126</item>
+    <item name="wifi.controller.voltage">3700</item>
+    <item name="bluetooth.active">120</item>
+    <item name="bluetooth.on">0.6</item>
+    <item name="bluetooth.controller.voltage">3700</item>
+    <item name="ambient.on">113.39</item>
+    <item name="audio">15</item>
+    <item name="video">16</item>
+    <item name="modem.controller.sleep">0</item>
+    <item name="gps.voltage">0</item>
     <array name="cpu.clusters.cores">
         <value>4</value>
         <value>4</value>
@@ -58,36 +77,14 @@
         <value>152</value>
         <value>166</value>
     </array>
-    <item name="cpu.active">18.3</item>
-    <item name="cpu.idle">2.9</item>
-    <item name="cpu.suspend">0</item>
-    <item name="battery.capacity">4030</item>
-    <item name="wifi.on">0.1</item>
-    <item name="wifi.active">109</item>
-    <item name="wifi.scan">1.2</item>
-    <item name="dsp.audio">21</item>
-    <item name="dsp.video">71</item>
-    <item name="camera.flashlight">524</item>
-    <item name="camera.avg">395</item>
-    <item name="gps.on">6.8</item>
-    <item name="radio.active">152</item>
-    <item name="radio.scanning">4.4</item>
     <array name="radio.on">
         <value>86</value>
         <value>8.5</value>
     </array>
-    <item name="modem.controller.idle">4.4</item>
-    <item name="modem.controller.rx">135</item>
-    <item name="modem.controller.tx">126</item>
-    <item name="modem.controller.voltage">3700</item>
     <array name="memory.bandwidths">
         <value>13.8</value>
     </array>
-    <item name="wifi.controller.idle">1.22</item>
-    <item name="wifi.controller.rx">225</item>
-    <item name="wifi.controller.tx">126</item>
-    <array name="wifi.controller.tx_levels">1 </array>
-    <item name="wifi.controller.voltage">3700</item>
+    <array name="wifi.controller.tx_levels">1</array>
     <array name="wifi.batchedscan">
         <value>.0001</value>
         <value>.001</value>
@@ -95,7 +92,55 @@
         <value>.1</value>
         <value>1</value>
     </array>
-    <item name="bluetooth.active">120</item>
-    <item name="bluetooth.on">0.6</item>
-    <item name="bluetooth.controller.voltage">3700</item>
+    <array name="cpu.speeds.cluster0">
+        <value>300000</value>
+        <value>614400</value>
+        <value>864000</value>
+        <value>1017600</value>
+        <value>1305600</value>
+        <value>1420800</value>
+        <value>1612800</value>
+        <value>1804800</value>
+    </array>
+    <array name="cpu.speeds.cluster1">
+        <value>300000</value>
+        <value>652800</value>
+        <value>902400</value>
+        <value>1056000</value>
+        <value>1401600</value>
+        <value>1536000</value>
+        <value>1804800</value>
+        <value>2016000</value>
+    </array>
+    <array name="cpu.active.cluster0">
+        <value>10</value>
+        <value>15</value>
+        <value>20</value>
+        <value>24</value>
+        <value>35</value>
+        <value>45</value>
+        <value>60</value>
+        <value>80</value>
+    </array>
+    <array name="cpu.active.cluster1">
+        <value>12</value>
+        <value>18</value>
+        <value>24</value>
+        <value>40</value>
+        <value>60</value>
+        <value>75</value>
+        <value>100</value>
+        <value>130</value>
+    </array>
+    <array name="modem.controller.tx">
+        <value>0</value>
+        <value>0</value>
+        <value>0</value>
+        <value>0</value>
+        <value>0</value>
+    </array>
+    <array name="gps.signalqualitybased">
+        <value>0</value>
+        <value>0</value>
+    </array>
 </device>
