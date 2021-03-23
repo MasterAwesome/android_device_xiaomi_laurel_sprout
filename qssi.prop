@@ -219,13 +219,5 @@ ro.media.recorder-max-base-layer-fps = 60
 #Battery Property
 ro.charger.enable_suspend = 1
 
-# product.prop
-persist.vendor.dpm.feature=11
-audio.sys.noisy.broadcast.delay=500
-audio.sys.mute.latency.factor=2
-audio.sys.routing.latency=0
-audio.offload.min.duration.secs=30
-audio.sys.offload.pstimeout.secs=3
-
 # end of device/qcom/qssi/system.prop
 
