@@ -36,7 +36,6 @@
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
      <bool name="config_carrier_volte_available">true</bool>
-     <bool name="config_carrier_volte_tty_supported">true</bool>
 
     <!-- Flag specifying whether WFC over IMS should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
@@ -66,7 +65,6 @@
 
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
      <bool name="config_dynamic_bind_ims">true</bool>
-     <bool name="config_eap_sim_based_auth_supported">true</bool>
 
     <!--  Whether Multiuser UI should be shown -->
      <bool name="config_enableMultiUserUI">true</bool>
@@ -296,14 +294,6 @@
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
      <integer name="config_screenBrightnessDoze">17</integer>
-
-    <!-- Default screen brightness setting.
-         Must be in the range specified by minimum and maximum. -->
-     <integer name="config_screenBrightnessSettingDefault">102</integer>
-
-    <!-- Minimum screen brightness setting allowed by the power manager.
-         The user is forbidden from setting the brightness below this level. -->
-     <integer name="config_screenBrightnessSettingMinimum">10</integer>
 
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
      <integer name="config_shutdownBatteryTemperature">600</integer>
@@ -604,5 +594,13 @@
 
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
+
+    <!-- Default screen brightness setting.
+         Must be in the range specified by minimum and maximum. -->
+     <integer name="config_screenBrightnessSettingDefault">67</integer>
+
+    <!-- Minimum screen brightness setting allowed by the power manager.
+         The user is forbidden from setting the brightness below this level. -->
+     <integer name="config_screenBrightnessSettingMinimum">1</integer>
 </resources>
 
