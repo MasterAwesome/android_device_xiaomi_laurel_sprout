@@ -1,0 +1,4 @@
+on boot
+    chown system system /dev/input/event2
+    chmod 0664 /dev/input/event2
+

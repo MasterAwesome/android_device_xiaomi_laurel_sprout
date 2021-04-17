@@ -1,0 +1,12 @@
+type hal_power_trinket, domain;
+hal_server_domain(hal_power_trinket, hal_power)
+
+type hal_power_trinket_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_power_trinket)
+
+allow hal_power_trinket_exec input_device:dir r_dir_perms;
+allow hal_power_trinket_exec input_device:chr_file rw_file_perms;
+
+allow hal_power_trinket input_device:dir r_dir_perms;
+allow hal_power_trinket input_device:chr_file rw_file_perms;
+

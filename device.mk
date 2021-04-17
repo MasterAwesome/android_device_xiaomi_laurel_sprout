@@ -153,13 +153,9 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0 \
-    android.hardware.power@1.1 \
-    android.hardware.power@1.2 \
-    android.hardware.power@1.3
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/perf/powerhint.json:system/etc/powerhint.json
+    android.hardware.power-service.xiaomi_trinket \
+    vendor.qti.hardware.perf@2.2 \
+    init.dt2w.rc
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
