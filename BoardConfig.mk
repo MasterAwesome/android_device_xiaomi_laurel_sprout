@@ -87,7 +87,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 NEED_KERNEL_MODULE_SYSTEM := true
-TARGET_KERNEL_CONFIG := vendor/trinket-perf_defconfig
+TARGET_KERNEL_CONFIG := vendor/laurel_sprout-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/laurel_sprout
 TARGET_KERNEL_NO_LLVM_BINUTILS := true
 
