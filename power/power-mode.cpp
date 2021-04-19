@@ -19,13 +19,6 @@
 #include <android-base/logging.h>
 #include <linux/input.h>
 
-namespace {
-int open_ts_input() {
-    int fd = open("/dev/input/event2", O_RDWR);
-    return fd;
-}
-}  // anonymous namespace
-
 namespace aidl {
 namespace android {
 namespace hardware {
@@ -50,7 +43,7 @@ bool isDeviceSpecificModeSupported(Mode type, bool* _aidl_return) {
 bool setDeviceSpecificMode(Mode type, bool enabled) {
     switch (type) {
         case Mode::DOUBLE_TAP_TO_WAKE: {
-            int fd = open_ts_input();
+            int fd = open("/dev/input/event2", O_RDWR);
             if (fd == -1) {
                 LOG(WARNING)
                     << "DT2W won't work because no supported touchscreen input devices were found";
