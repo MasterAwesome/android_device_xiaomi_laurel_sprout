@@ -10,3 +10,10 @@ allow init {
     sysfs_graphics
     vendor_sysfs_graphics
 }:file { open read setattr };
+
+allow init sysfs:file setattr;
+allow init sysfs_tp_fodstatus:file setattr;
+
+allow init vendor_sysfs_battery_supply:file setattr;
+allow init vendor_sysfs_graphics:lnk_file read;
+
