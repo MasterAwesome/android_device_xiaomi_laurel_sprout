@@ -1,0 +1,10 @@
+allow system_suspend sysfs:dir { open read getattr };
+allow system_suspend sysfs_rtc:dir { open read getattr };
+allow system_suspend vendor_sysfs_battery_supply:dir { open read getattr };
+allow system_suspend vendor_sysfs_usb_supply:dir { open read getattr };
+
+allow system_suspend sysfs:file { open read getattr };
+allow system_suspend sysfs_rtc:file { open read getattr };
+allow system_suspend vendor_sysfs_battery_supply:file { open read getattr };
+allow system_suspend vendor_sysfs_usb_supply:file { open read getattr };
+
