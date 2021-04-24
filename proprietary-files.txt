@@ -168,9 +168,6 @@ system_ext/lib/libqti-at.so
 system_ext/lib64/libdolphin.so
 system_ext/lib64/libqti-at.so
 
-# Power-off charging daemon
-bin/charger
-
 # RIL
 etc/permissions/privapp-permissions-qti.xml
 system_ext/etc/permissions/qti_libpermissions.xml
