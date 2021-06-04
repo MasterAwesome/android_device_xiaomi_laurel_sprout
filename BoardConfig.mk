@@ -111,7 +111,8 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 # Dex
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
-    WITH_DEXPREOPT ?= true
+    WITH_DEXPREOPT := true
+    DONT_DEXPREOPT_PREBUILTS := true
   endif
 endif
 
