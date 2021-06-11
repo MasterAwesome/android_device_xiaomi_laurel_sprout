@@ -9,6 +9,7 @@ type sysfs_graphics, sysfs_type, fs_type;
 type vendor_sysfs_graphics, sysfs_type, fs_type;
 type vendor_sysfs_usb_supply, sysfs_type, fs_type;
 type vendor_sysfs_battery_supply, sysfs_type, fs_type;
+type vendor_hal_perf_hwservice, hwservice_manager_type, protected_hwservice;
 
 type sysfs_led, sysfs_type, fs_type;
 type sysfs_red_led, sysfs_type, fs_type;

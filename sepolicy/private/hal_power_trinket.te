@@ -10,3 +10,5 @@ allow hal_power_trinket_exec input_device:chr_file rw_file_perms;
 allow hal_power_trinket input_device:dir r_dir_perms;
 allow hal_power_trinket input_device:chr_file rw_file_perms;
 
+allow hal_power_trinket vendor_hal_perf_hwservice:hwservice_manager find;
+
