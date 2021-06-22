@@ -34,7 +34,6 @@
      <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
 
 
-
     <!-- Flag specifying whether WFC over IMS should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
