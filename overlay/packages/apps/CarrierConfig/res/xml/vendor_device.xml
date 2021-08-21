@@ -81,7 +81,7 @@
     <carrier_config mcc="520" mnc="5">
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
-    <carrier_config mcc="334" mnc="20">
+    <carrier_config mcc="334" mnc="20,30,140">
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="250" mnc="1">
