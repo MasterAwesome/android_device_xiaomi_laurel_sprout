@@ -177,13 +177,13 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIR += \
     device/qcom/sepolicy/generic/private \
     device/qcom/sepolicy/qva/private
 
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIR += \
     device/qcom/sepolicy/generic/public \
     device/qcom/sepolicy/generic/public/attribute \
     device/qcom/sepolicy/qva/public \
