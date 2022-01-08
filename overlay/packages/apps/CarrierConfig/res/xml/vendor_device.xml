@@ -7,6 +7,9 @@
     <carrier_config mcc="208" mnc="10">
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
+    <carrier_config mcc="286" mnc="3">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
     <carrier_config mcc="234" mnc="15">
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
